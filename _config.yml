@@ -31,6 +31,7 @@ name:                 "Harrison Turley"
 avatar:               "true"
 email:                "harrrison.turley.1998@gmail.com"
 personal_title:       "3rd Year Computer Engineering Student"
+summary:              "I am currently studying Computer Engineering at the University of British Columbia, Vancouver campus.  My expected graduation date is May 2021.  I have experience in the technology industry both as a Quality Assurance tester and a Software Engineer, and I hope to continue working as a Software Engineer in the future."
 
 experience_toggle:    true
 education_toggle:     true

@@ -1,0 +1,23 @@
+{% if site.social_links %}
+  <ul class="icon-links">
+
+    <!-- GitHub link -->
+    {% if site.social_links.github_url %}
+      <li class="icon-link-item">
+        <a href="{{site.social_links.github_url}}" class="icon-link" itemprop="sameAs">
+          {% include icons/icon-github.html %}
+        </a>
+      </li>
+    {% endif %}
+
+    <!-- LinkedIn link -->
+    {% if site.social_links.linkedin_url %}
+      <li class="icon-link-item">
+        <a href="{{site.social_links.linkedin_url}}" class="icon-link" itemprop="sameAs">
+          {% include icons/icon-linkedin.html %}
+        </a>
+      </li>
+    {% endif %}
+
+  </ul>
+{% endif %}

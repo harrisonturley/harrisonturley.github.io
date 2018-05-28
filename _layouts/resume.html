@@ -12,14 +12,38 @@
     <meta name="description" content="{% if page.excerpt %} {{ page.excerpt | strip_html | strip_newlines | truncate: 160 }} {% endif %}">
 
     <link rel="stylesheet" href="css/main.scss">
-    <link rel="shortcut icon" type="image/png" href = "/images/favicon.png"
+    <link rel="shortcut icon" type="image/png" href = "/images/favicon.png">
   </head>
 
   <body class="theme-default">
     <div class="wrapper" itemscope itemtype = "http://schema.org/Person">
 
       <header class="page-header">
+        <!-- Personal avatar, rendered depending on config settings -->
+        {% if site.avatar == 'true' %}
+          <img src="images/profilepic.jpeg" alt="my photo" class="avatar no-print" itemprop="image">
+        {% endif %}
+
+        <!-- Name for the top of the resume -->
         <h1 class="header-resume-name" itemprop="resume-name">{{site.name}}</h1>
+
+        <div class="title-bar no-print">
+
+          <!-- Title to appear at the top of the resume -->
+          <h2 class="header-title" itemprop="jobTitle">{{site.personal_title}}</h2>
+
+          <!-- Icon links in an include due to repition -->
+          {% include icon-links.html %}
+        </div>
+
+        <!-- Full executive summary, as defined in config -->
+        <div class="executive-summary" itemprop="description">
+          {{ site.summary }}
+        </div>
+
+        <!-- Email button -->
+        <a href="mailto:{{ site.email }}" class="contact-button no-print" itemprop="email">Contact me</a>
+
       </header>
     </div>
   </body>
