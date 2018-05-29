@@ -11,7 +11,7 @@
 
     <meta name="description" content="{% if page.excerpt %} {{ page.excerpt | strip_html | strip_newlines | truncate: 160 }} {% endif %}">
 
-    <link rel="stylesheet" href="css/main.scss">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" type="image/png" href = "/images/favicon.png">
   </head>
 
@@ -21,7 +21,7 @@
       <header class="page-header">
         <!-- Personal avatar, rendered depending on config settings -->
         {% if site.avatar == 'true' %}
-          <img src="images/profilepic.jpeg" alt="my photo" class="avatar no-print" itemprop="image">
+          <img src="images/profilepic.jpg" alt="my photo" class="avatar no-print" itemprop="image">
         {% endif %}
 
         <!-- Name for the top of the resume -->
