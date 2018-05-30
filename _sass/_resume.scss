@@ -1,5 +1,14 @@
 // Main resume styling
 
+// Styling for the entire document
+.theme-default {
+  width: $container-width;
+  margin-right: auto;
+  margin-left: auto;
+  @include clearfix;
+}
+
+// Header styling
 .page-header { padding: 1.5rem 0;
 
   .avatar {
@@ -25,13 +34,14 @@
   .title-bar {
     @include section-break;
     margin-top: 2rem;
+    margin-bottom: 0.5rem;
     padding: 0.4rem 0;
     @include clearfix;
 
     .header-title {
       @include sans;
       font-weight: 300;
-      font-size: 1.4rem;
+      font-size: 1.75rem;
       line-height: 2rem;
       letter-spacing: -0.05rem;
       text-align: center;
@@ -42,14 +52,17 @@
         margin: 0;
       }
     }
+  }
 
-    .executive-summary {
-      @include media_larger_than_mobile {
-        font-size: 1.125rem;
-      }
+  .executive-summary {
+    line-height: 2rem;
+    @include media_larger_than_mobile {
+      font-size: 1.25rem;
     }
   }
 }
+
+
 
 .icon-links {
   margin: 0;
@@ -72,11 +85,20 @@
     margin-left: 5px;
   }
 
-  .icon-link {
+  .icon-link-github {
     display: inline-block;
 
     &:hover .icon path {
-      fill: #333;
+      fill: black;
+      @include transition(all 0.2s ease);
+    }
+  }
+
+  .icon-link-linkedin {
+    display: inline-block;
+
+    &:hover .icon path {
+      fill: #0077B5;
       @include transition(all 0.2s ease);
     }
   }
@@ -84,4 +106,29 @@
   .icon {
     height: 28px;
   }
+}
+
+.contact-button {
+  //@include border-radius(3px);
+  background-color: #efefef;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  margin: 1.5rem auto;
+  width: 220px;
+  font-size: 1.4rem;
+  //@include sans_light;
+  color: black;
+  line-height: 55px;
+
+  @include transition(all 0.2s ease);
+
+  &:hover {
+    background-color: grey;
+    color: white;
+  }
+
+  //&.not-looking {
+    //width: 400px;
+  //}
 }
