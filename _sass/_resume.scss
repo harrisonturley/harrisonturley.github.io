@@ -9,7 +9,11 @@
 }
 
 // Header styling
-.page-header { padding: 1.5rem 0;
+.page-header {
+  padding: 1.5rem 0;
+  border: 1px solid black;
+  padding: 2rem 2rem 0.5rem;
+  @include bottom_shadow;
 
   .avatar {
     width: 200px;
@@ -109,7 +113,6 @@
 }
 
 .contact-button {
-  //@include border-radius(3px);
   background-color: #efefef;
   text-decoration: none;
   text-align: center;
@@ -117,7 +120,6 @@
   margin: 1.5rem auto;
   width: 220px;
   font-size: 1.4rem;
-  //@include sans_light;
   color: black;
   line-height: 55px;
 
