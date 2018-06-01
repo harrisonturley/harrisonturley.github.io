@@ -10,7 +10,6 @@
 
 // Header styling
 .page-header {
-  padding: 1.5rem 0;
   border: 1px solid black;
   padding: 2rem 2rem 0.5rem;
   @include bottom_shadow;
@@ -129,8 +128,53 @@
     background-color: grey;
     color: white;
   }
+}
 
-  //&.not-looking {
-    //width: 400px;
-  //}
+
+// Content section styling
+.content-section {
+  border: 1px solid black;
+  padding: 2rem 1.5rem 0.5rem;
+  @include bottom_shadow;
+  margin: 3rem 0 0rem;
+
+  .section-header {
+    @include section-break;
+    margin-bottom: 1.5rem;
+
+    .section-title {
+      @include sans;
+      font-weight: 900;
+      font-size: 1.75rem;
+      letter-spacing: -0.05rem;
+      margin: 0;
+    }
+  }
+
+  .resume-item {
+    margin-bottom: 1.5rem;
+  }
+
+  .item-title {
+    @include sans;
+    font-weight: 700;
+    margin: 0 0 0.75rem;
+    font-size: 1.5rem;
+    letter-spacing: -0.05rem;
+    line-height: 1;
+  }
+
+  .item-details {
+    font-size: 1.35rem;
+    margin: 0 0 0.75rem;
+    line-height: 1;
+  }
+
+  .item-summary, .resume-item-list {
+    margin: 0.75rem 0 0;
+    font-size: 1.2rem;
+    li {
+      padding: 0.3rem 0 0;
+    }
+  }
 }

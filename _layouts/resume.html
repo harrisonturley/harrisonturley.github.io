@@ -45,6 +45,31 @@
         <a href="mailto:{{ site.email }}" class="contact-button no-print" itemprop="email">Contact me</a>
 
       </header>
+
+
+      <!-- Experience section -->
+      {% if site.experience_toggle %}
+        <section class="content-section">
+
+          <!-- Main title for experience -->
+          <header class="section-header">
+            <h2 class="section-title">Experience</h2>
+          </header>
+
+          <!-- Individual experiences loaded by Liquid -->
+          {% for job in site.data.experience %}
+            <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
+              <h3 class="item-title" itemprop="name">{{ job.company }}</h3>
+              <h4 class="item-details" itemprop="description">{{ job.position }} &bull; {{ job.duration }} </h4>
+              <p class="item-summary">{{ job.summary}}</p>
+            </div>
+          {% endfor %}
+        </section>
+      {% endif %}
+
+
+      <!-- Project section -->
+
     </div>
   </body>
 </html>
