@@ -112,13 +112,14 @@
 }
 
 .contact-button {
+  @include sans;
   background-color: #efefef;
   text-decoration: none;
   text-align: center;
   display: block;
   margin: 1.5rem auto;
   width: 220px;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: black;
   line-height: 55px;
 
@@ -131,7 +132,7 @@
 }
 
 
-// Content section styling 
+// Content section styling
 .content-section {
   border: 1px solid black;
   padding: 2rem 1.5rem 0.5rem;
@@ -165,7 +166,9 @@
   }
 
   .item-details {
-    font-size: 1.35rem;
+    @include sans;
+    font-weight: 400;
+    font-size: 1.15rem;
     margin: 0 0 0.75rem;
     line-height: 1;
   }
