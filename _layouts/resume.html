@@ -32,7 +32,7 @@
           <!-- Title to appear at the top of the resume -->
           <h2 class="header-title" itemprop="jobTitle">{{site.personal_title}}</h2>
 
-          <!-- Icon links in an include due to repition -->
+          <!-- Icon links in an include due to repetion -->
           {% include icon-links.html %}
         </div>
 
@@ -92,7 +92,7 @@
               <h3 class="item-title" itemprop="name">
                 {% if project.website %}
                   <a href="{{ project.website }}">
-                    {{ project.title}}
+                    {{ project.title }}
                   </a>
                 {% else %}
                   {{ project.title }}
@@ -105,6 +105,33 @@
           {% endfor %}
         </section>
       {% endif %}
+
+
+      {% if site.education_toggle %}
+      <!-- Education section -->
+      <section class="content-section">
+
+        <!-- Main title for education section -->
+        <header class="section-header">
+          <h2 class="section-title">Education</h2>
+        </header>
+
+        {% for school in site.data.schools %}
+        <!-- Individual education entries loaded by Liquid -->
+          <div class="resume-item" itemscope itemtype="http://schema.org/School">
+            <h3 class="item-title" itemprop="name">
+              {{ school.degree }}
+            </h3>
+            <h4 class="item-details" itemprop="description">{{ school.name }} &bull; {{ school.location }}</h4>
+            <p class="item-summary">{{ school.summary }}
+          </div>
+        {% endfor %}
+      </section>
+      {% endif %}
+
+
+      <!-- Skills section -->
+      
     </div>
   </body>
 </html>
