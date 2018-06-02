@@ -47,8 +47,8 @@
       </header>
 
 
-      <!-- Experience section -->
       {% if site.experience_toggle %}
+      <!-- Experience section -->
         <section class="content-section">
 
           <!-- Main title for experience -->
@@ -56,20 +56,55 @@
             <h2 class="section-title">Experience</h2>
           </header>
 
-          <!-- Individual experiences loaded by Liquid -->
           {% for job in site.data.experience %}
+          <!-- Individual experiences loaded by Liquid -->
             <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
-              <h3 class="item-title" itemprop="name">{{ job.company }}</h3>
-              <h4 class="item-details" itemprop="description">{{ job.position }} &bull; {{ job.duration }} </h4>
-              <p class="item-summary">{{ job.summary}}</p>
+              <h3 class="item-title" itemprop="name">
+                {% if job.website %}
+                <a href="{{ job.website }}">
+                  {{ job.company }}
+                </a>
+                {% else %}
+                  {{ job.company }}
+                {% endif %}
+              </h3>
+
+              <h4 class="item-details" itemprop="description">{{ job.position }} &bull; {{ job.duration }}</h4>
+              <p class="item-summary">{{ job.summary }}</p>
             </div>
           {% endfor %}
         </section>
       {% endif %}
 
 
+      {% if site.projects_toggle %}
       <!-- Project section -->
+        <section class="content-section">
 
+          <!-- Main title for project section -->
+          <header class="section-header">
+            <h2 class="section-title">Projects</h2>
+          </header>
+
+          {% for project in site.data.projects %}
+          <!-- Individual projects loaded by Liquid -->
+            <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
+              <h3 class="item-title" itemprop="name">
+                {% if project.website %}
+                  <a href="{{ project.website }}">
+                    {{ project.title}}
+                  </a>
+                {% else %}
+                  {{ project.title }}
+                {% endif %}
+              </h3>
+
+              <h4 class="item-details" itemprop="description">{{ project.duration }}</h4>
+              <p class="item-summary">{{ project.summary }}</p>
+            </div>
+          {% endfor %}
+        </section>
+      {% endif %}
     </div>
   </body>
 </html>
