@@ -123,15 +123,35 @@
               {{ school.degree }}
             </h3>
             <h4 class="item-details" itemprop="description">{{ school.name }} &bull; {{ school.location }}</h4>
-            <p class="item-summary">{{ school.summary }}
+            <p class="item-summary">{{ school.summary }}</p>
           </div>
         {% endfor %}
       </section>
       {% endif %}
 
-
+      {% if site.skills_toggle %}
       <!-- Skills section -->
-      
+      <section class="content-section">
+
+        <!-- Main title for skills section -->
+        <header class="section-header">
+          <h2 class="section-title">Skills</h2>
+        </header>
+
+        {% for skill in site.data.skills %}
+        <!-- Individual skill entries loaded by Liquid -->
+          <div class="resume-item">
+            <h3 class="item-title">{{ skill.header }}</h3>
+            <p class="item-summary">{{ skill.list }}</p>
+          </div>
+        {% endfor %}
+      </section>
+      {% endif %}
+
+      <!-- Footer -->
+      <footer class="site-footer">
+        <p class="footer-line">If you would like to get in contact with me, please feel free to email me at <a href="mailto:{{ site.email }}" class="footer-email">{{ site.email }}</a>
+      </footer>
     </div>
   </body>
 </html>
