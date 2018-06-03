@@ -58,7 +58,7 @@
   }
 
   .executive-summary {
-    line-height: 2rem;
+    line-height: 1.75rem;
     @include media_larger_than_mobile {
       font-size: 1.25rem;
     }
@@ -187,7 +187,7 @@
 
   .item-summary, .resume-item-list {
     margin: 0.75rem 0 0;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     li {
       padding: 0.3rem 0 0;
     }
@@ -197,7 +197,7 @@
 .site-footer {
   border-top: 4px solid #c7c7c7;
   margin-top: 3rem;
-  
+
   .footer-line {
     text-align: center;
     font-size: 1.1rem;
