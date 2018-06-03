@@ -1,7 +1,41 @@
 // Main resume styling
 
-// Styling for the entire document
+// Static header styling
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0.5rem 0 0.5rem;
+  background: #555;
+  color: #f1f1f1;
+}
+
+.dropdown-menu {
+  position: relative;
+  display: inline-block;
+
+  &:hover .dropdown-menu-content {
+    display:block;
+  }
+}
+
+.dropdown-menu-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  color: black;
+}
+
 .theme-default {
+  margin: 0;
+}
+
+// Styling for the entire document
+.wrapper {
   width: $container-width;
   margin-right: auto;
   margin-left: auto;
@@ -10,6 +44,7 @@
 
 // Header styling
 .page-header {
+  margin-top: 6.5rem;
   border: 1px solid black;
   padding: 2rem 2rem 0.5rem;
   @include bottom_shadow;
@@ -71,10 +106,8 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  position: relative;
   top: 4px;
   text-align: center;
-  border-top: 2px solid #c7c7c7;
   padding-top: 0.4rem;
 
   @include media_larger_than_mobile {
@@ -136,8 +169,8 @@
 .content-section {
   border: 1px solid black;
   padding: 2rem 1.5rem 0.5rem;
-  @include bottom_shadow;
   margin: 3rem 0 0rem;
+  @include bottom_shadow;
 
   .section-header {
     @include section-break;
