@@ -5,9 +5,9 @@
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 0.5rem 0 0.5rem;
-  background: #555;
-  color: #f1f1f1;
+  //padding: 0.5rem 0 0.5rem;
+  border-bottom: 3px solid black;
+  background: $header-background-color;
 }
 
 .dropdown-menu {
@@ -18,31 +18,39 @@
     display:block;
   }
 
-  &:hover .dropdown-button {
-    background-color: #E1E1E1;
+  &:hover .icon-container {
+    background-color: $dropdown-selected;
   }
 }
 
 .dropdown-menu-content a:hover {
-  background-color: #E1E1E1;
+  background-color: $dropdown-selected;
 }
 
-.dropdown-button {
-  background-color: #F9F9F9;
+.icon-container {
+  background-color: $dropdown-unselected;
   font-size: 1rem;
   padding: 1rem;
+  margin: 0.5rem;
   border: none;
   cursor: pointer;
+
+  div {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+  }
 }
 
 .dropdown-menu-content {
   display: none;
   position: absolute;
-  background-color: #F9F9F9;
-  min-width: 160px;
+  background-color: $dropdown-unselected;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   color: black;
+  min-width: 8rem;
 
   a {
     color: black;
