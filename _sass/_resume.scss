@@ -4,10 +4,7 @@
 .site-header {
   position: fixed;
   top: 0;
-  width: 100%;
-  //padding: 0.5rem 0 0.5rem;
-  border-bottom: 3px solid black;
-  background: $header-background-color;
+  width: 0;
 }
 
 .dropdown-menu {
@@ -19,7 +16,7 @@
   }
 
   &:hover .icon-container {
-    background-color: $dropdown-selected;
+    background-color: #3E8E41;
   }
 }
 
@@ -28,11 +25,12 @@
 }
 
 .icon-container {
-  background-color: $dropdown-unselected;
+  background-color: #4CAF50;
   font-size: 1rem;
   padding: 1rem;
-  margin: 0.5rem;
-  border: none;
+  margin: 1rem;
+  border: 1px solid black;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   cursor: pointer;
 
   div {
@@ -53,6 +51,7 @@
   min-width: 8rem;
 
   a {
+    @include sans;
     color: black;
     padding: 12px 16px;
     text-decoration: none;
@@ -74,7 +73,7 @@
 
 // Header styling
 .page-header {
-  margin-top: 6.5rem;
+  margin-top: 1.5rem;
   border: 1px solid black;
   padding: 2rem 2rem 0.5rem;
   @include bottom_shadow;
