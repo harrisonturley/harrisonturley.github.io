@@ -3,8 +3,8 @@
 // Static header styling
 .site-header {
   position: fixed;
-  top: 0;
   width: 0;
+  height: 0;
 }
 
 .dropdown-menu {
@@ -16,7 +16,7 @@
   }
 
   &:hover .icon-container {
-    background-color: #3E8E41;
+    background-color: $dropdown-selected;
   }
 }
 
@@ -25,12 +25,12 @@
 }
 
 .icon-container {
-  background-color: #4CAF50;
+  background-color: $dropdown-unselected;
   font-size: 1rem;
   padding: 1rem;
   margin: 1rem;
   border: 1px solid black;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 
   div {
