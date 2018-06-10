@@ -19,5 +19,14 @@
       </li>
     {% endif %}
 
+    <!-- LinkedIn link -->
+    {% if site.social_links.linkedin_url %}
+      <li class="icon-link-item">
+        <a href="{{site.social_links.linkedin_url}}" class="icon-link-linkedin" itemprop="sameAs">
+          {% include icons/icon-experience.html %}
+        </a>
+      </li>
+    {% endif %}
+
   </ul>
 {% endif %}
