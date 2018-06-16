@@ -70,6 +70,11 @@
           <!-- Main title for experience -->
           <header class="section-header">
             <h2 class="section-title">Experience</h2>
+
+            <!-- Section icon -->
+            <a href="#experience" itemprop="sameAs">
+              {% include icons/icon-experience.html %}
+            </a>
           </header>
 
           {% for job in site.data.experience %}
@@ -85,7 +90,10 @@
                 {% endif %}
               </h3>
 
-              <h4 class="item-details" itemprop="description">{{ job.position }} &bull; {{ job.duration }}</h4>
+              <div class="item-details" itemprop="description">
+                <h4>{{ job.position }}</h4>
+                <h4 class="item-details-duration">{{job.duration}}</h4>
+              </div>
               <p class="item-summary">{{ job.summary }}</p>
             </div>
           {% endfor %}
@@ -99,7 +107,12 @@
 
           <!-- Main title for project section -->
           <header class="section-header">
-            <h2 class="section-title">Projects</h2>
+            <h2 class="section-title">Personal Projects</h2>
+
+            <!-- Section icon -->
+            <a href="#projects" itemprop="sameAs">
+              {% include icons/icon-projects.html %}
+            </a>
           </header>
 
           {% for project in site.data.projects %}
@@ -130,6 +143,11 @@
         <!-- Main title for education section -->
         <header class="section-header">
           <h2 class="section-title">Education</h2>
+
+          <!-- Section icon -->
+          <a href="#education" itemprop="sameAs">
+            {% include icons/icon-education.html %}
+          </a>
         </header>
 
         {% for school in site.data.schools %}
@@ -152,6 +170,11 @@
         <!-- Main title for skills section -->
         <header class="section-header">
           <h2 class="section-title">Skills</h2>
+
+          <!-- Section icon -->
+          <a href="#skills" itemprop="sameAs">
+            {% include icons/icon-skills.html %}
+          </a>
         </header>
 
         {% for skill in site.data.skills %}

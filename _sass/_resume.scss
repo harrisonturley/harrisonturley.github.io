@@ -203,7 +203,9 @@
 
   .section-header {
     @include section-break;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    padding: 0.4rem 0;
+    @include clearfix;
 
     .section-title {
       @include sans;
@@ -211,8 +213,34 @@
       font-size: 1.75rem;
       letter-spacing: -0.05rem;
       margin: 0;
+
+      @include media_larger_than_mobile {
+        float: left;
+        margin: 0;
+      }
+    }
+
+    a {
+      margin: 0;
+      padding: 0;
+      top: 4px;
+      text-align: center;
+      padding-top: 0.4rem;
+      display: inline-block;
+
+      @include media_larger_than_mobile {
+        float: right;
+        border-top: none;
+        padding-top: 0;
+      }
+
+      &:hover .icon path {
+        fill: #0099B5;
+        @include transition(all 0.2s ease);
+      }
     }
   }
+
 
   .resume-item {
     margin-bottom: 1.5rem;
@@ -245,6 +273,14 @@
     font-size: 1.15rem;
     margin: 0 0 0.75rem;
     line-height: 1;
+
+    h4 {
+      @include sans;
+      font-weight: 400;
+      font-size: 1.15rem;
+      margin: 0 0 0.75rem;
+      line-height: 1;
+    }
   }
 
   .item-summary, .resume-item-list {
