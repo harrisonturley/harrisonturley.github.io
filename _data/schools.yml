@@ -2,10 +2,12 @@
 
 - name: University of British Columbia
   location: Vancouver, BC, Canada
+  duration: September, 2016 &ndash; Present
   degree: Bachelor of Applied Science, Computer Engineering
-  summary: September, 2016 &ndash; Present<br><ul class="resume-item-list"><li>Dean's Honour List, 2017</li></ul>
+  summary: <ul class="resume-item-list"><li>Dean's Honour List, 2017</li></ul>
 
 - name: Timberline Secondary
   location: Campbell River, BC, Canada
+  duration: September, 2012 &ndash; June, 2016
   degree: High School Diploma
-  summary: September, 2012 &ndash; June, 2016<br><ul class="resume-item-list"><li>Top Academic Student, 2016</li><li>Top Computer Technology Student, 2016</li><li>Top Math Student, 2016</li></ul>
+  summary: <ul class="resume-item-list"><li>Top Academic Student, 2016</li><li>Top Computer Technology Student, 2016</li><li>Top Math Student, 2016</li></ul>

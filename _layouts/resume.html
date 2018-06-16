@@ -44,7 +44,6 @@
         <h1 class="header-resume-name" itemprop="resume-name">{{site.name}}</h1>
 
         <div class="title-bar no-print">
-
           <!-- Title to appear at the top of the resume -->
           <h2 class="header-title" itemprop="jobTitle">{{site.personal_title}}</h2>
 
@@ -59,7 +58,6 @@
 
         <!-- Email button -->
         <a href="mailto:{{ site.email }}" class="contact-button no-print" itemprop="email">Contact me</a>
-
       </header>
 
 
@@ -80,7 +78,7 @@
           {% for job in site.data.experience %}
           <!-- Individual experiences loaded by Liquid -->
             <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
-              <h3 class="item-title" itemprop="name">
+              <h3 class="resume-item-title" itemprop="name">
                 {% if job.website %}
                 <a href="{{ job.website }}">
                   {{ job.company }}
@@ -90,11 +88,12 @@
                 {% endif %}
               </h3>
 
-              <div class="item-details" itemprop="description">
+              <div class="resume-item-details" itemprop="description">
                 <h4>{{ job.position }}</h4>
-                <h4 class="item-details-duration">{{job.duration}}</h4>
+                <h4 class="resume-item-details-duration">{{ job.duration }}</h4>
               </div>
-              <p class="item-summary">{{ job.summary }}</p>
+
+              <p class="resume-item-summary">{{ job.summary }}</p>
             </div>
           {% endfor %}
         </section>
@@ -108,7 +107,6 @@
           <!-- Main title for project section -->
           <header class="section-header">
             <h2 class="section-title">Personal Projects</h2>
-
             <!-- Section icon -->
             <a href="#projects" itemprop="sameAs">
               {% include icons/icon-projects.html %}
@@ -118,7 +116,7 @@
           {% for project in site.data.projects %}
           <!-- Individual projects loaded by Liquid -->
             <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
-              <h3 class="item-title" itemprop="name">
+              <h3 class="resume-item-title" itemprop="name">
                 {% if project.website %}
                   <a href="{{ project.website }}">
                     {{ project.title }}
@@ -128,8 +126,8 @@
                 {% endif %}
               </h3>
 
-              <h4 class="item-details" itemprop="description">{{ project.duration }}</h4>
-              <p class="item-summary">{{ project.summary }}</p>
+              <h4 class="resume-item-details" itemprop="description">{{ project.duration }}</h4>
+              <p class="resume-item-summary">{{ project.summary }}</p>
             </div>
           {% endfor %}
         </section>
@@ -153,11 +151,14 @@
         {% for school in site.data.schools %}
         <!-- Individual education entries loaded by Liquid -->
           <div class="resume-item" itemscope itemtype="http://schema.org/School">
-            <h3 class="item-title" itemprop="name">
+            <h3 class="resume-item-title" itemprop="name">
               {{ school.degree }}
             </h3>
-            <h4 class="item-details" itemprop="description">{{ school.name }} &bull; {{ school.location }}</h4>
-            <p class="item-summary">{{ school.summary }}</p>
+            <div class="resume-item-details" itemprop="description">
+              <h4>{{ school.name }} &bull; {{ school.location }}</h4>
+              <h4 class="resume-item-details-duration">{{ school.duration }}</h4>
+            </div>
+            <p class="resume-item-summary">{{ school.summary }}</p>
           </div>
         {% endfor %}
       </section>
@@ -170,7 +171,6 @@
         <!-- Main title for skills section -->
         <header class="section-header">
           <h2 class="section-title">Skills</h2>
-
           <!-- Section icon -->
           <a href="#skills" itemprop="sameAs">
             {% include icons/icon-skills.html %}
@@ -180,8 +180,8 @@
         {% for skill in site.data.skills %}
         <!-- Individual skill entries loaded by Liquid -->
           <div class="resume-item">
-            <h3 class="item-title">{{ skill.header }}</h3>
-            <p class="item-summary">{{ skill.list }}</p>
+            <h3 class="resume-item-title">{{ skill.header }}</h3>
+            <p class="resume-item-summary">{{ skill.list }}</p>
           </div>
         {% endfor %}
       </section>
