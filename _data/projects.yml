@@ -10,11 +10,6 @@
   duration: August, 2017 &ndash; February, 2018
   summary: <ul class="resume-item-list"> <li>Built a Whack-A-Mole app for Android using Java and Android's XML vocabulary as a personal project</li> <li>Designed, built and tested the app from start to finish to increase my knowledge in the major parts of project development</li> </ul>
 
-- title: SafeTalk
-  website: https://github.com/Judge24601/SafeTalk
-  duration: January 2018
-  summary: <ul class="resume-item-list"> <li>Constructed an Android app with 3 others in 24 hours for nwHacks 2018</li> <li>Created with the Android SDK, and Firebase for a backend real-time database</li> <li>The premise of the app was to allow the user to add a group of trusted friends and family, and could then send each other a distress SMS message with location attached with just the tap of a button when they felt in danger.  They could also see each other's last known location should a close friend go missing.</li> </ul>
-
 - title: Particle Engine
   website: https://github.com/harrisonturley/ParticleEngyn
   duration: May, 2017 &ndash; July, 2017

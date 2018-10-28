@@ -1,6 +1,6 @@
 # Skills Data
 
 - header: Languages
-  list: <ul class="resume-item-list"> <li>Java</li> <li>Swift</li> <li>C</li> <li>HTML</li> <li>SCSS</li> <li>Android XML Vocabulary</li> <li>Verilog</li> </ul>
+  list: <ul class="resume-item-list"> <li>Java</li> <li>Swift</li> <li>C</li> <li>C++</li> <li>HTML</li> <li>SCSS</li> <li>React</li> <li>Android XML Vocabulary</li> <li>Verilog</li> </ul>
 - header: Software Tools
   list: <ul class="resume-item-list"> <li>Git</li> <li>Android Studio</li> <li>Xcode</li> <li>Eclipse</li> <li>Ubuntu, MacOS, Windows</li> </ul>

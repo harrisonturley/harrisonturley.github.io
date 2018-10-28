@@ -25,9 +25,10 @@
           <div></div>
         </div>
         <div class="dropdown-menu-content">
+	  <a href="#education">Education</a>
           <a href="#experience">Experience</a>
           <a href="#projects">Projects</a>
-          <a href="#education">Education</a>
+	  <a href="#hackathons">Hackathons</a>
           <a href="#skills">Skills</a>
         </div>
       </div>
@@ -59,6 +60,39 @@
         <!-- Email button -->
         <a href="mailto:{{ site.email }}" class="contact-button no-print" itemprop="email">Contact me</a>
       </header>
+
+
+
+      {% if site.education_toggle %}
+      <!-- Education section -->
+      <section class="content-section" id="education">
+
+        <!-- Main title for education section -->
+        <header class="section-header">
+          <h2 class="section-title">Education</h2>
+
+          <!-- Section icon -->
+          <a href="#education" itemprop="sameAs">
+            {% include icons/icon-education.html %}
+          </a>
+        </header>
+
+        {% for school in site.data.schools %}
+        <!-- Individual education entries loaded by Liquid -->
+          <div class="resume-item" itemscope itemtype="http://schema.org/School">
+            <h3 class="resume-item-title" itemprop="name">
+              {{ school.degree }}
+            </h3>
+            <div class="resume-item-details" itemprop="description">
+              <h4>{{ school.name }} &bull; {{ school.location }}</h4>
+              <h4 class="resume-item-details-duration">{{ school.duration }}</h4>
+            </div>
+            <p class="resume-item-summary">{{ school.summary }}</p>
+          </div>
+        {% endfor %}
+      </section>
+      {% endif %}
+
 
 
       {% if site.experience_toggle %}
@@ -100,6 +134,7 @@
       {% endif %}
 
 
+
       {% if site.projects_toggle %}
       <!-- Project section -->
         <section class="content-section" id="projects">
@@ -134,35 +169,42 @@
       {% endif %}
 
 
-      {% if site.education_toggle %}
-      <!-- Education section -->
-      <section class="content-section" id="education">
 
-        <!-- Main title for education section -->
-        <header class="section-header">
-          <h2 class="section-title">Education</h2>
+      {% if site.hackathons_toggle %}
+      <!-- Hackathons section -->
+        <section class="content-section" id="hackathons">
 
-          <!-- Section icon -->
-          <a href="#education" itemprop="sameAs">
-            {% include icons/icon-education.html %}
-          </a>
-        </header>
+          <!-- Main title for hackathons section -->
+          <header class="section-header">
+            <h2 class="section-title">Hackathons</h2>
+            <!-- Section icon -->
+            <a href="#hackathons" itemprop="sameAs">
+              {% include icons/icon-hackathons.html %}
+            </a>
+          </header>
 
-        {% for school in site.data.schools %}
-        <!-- Individual education entries loaded by Liquid -->
-          <div class="resume-item" itemscope itemtype="http://schema.org/School">
-            <h3 class="resume-item-title" itemprop="name">
-              {{ school.degree }}
-            </h3>
-            <div class="resume-item-details" itemprop="description">
-              <h4>{{ school.name }} &bull; {{ school.location }}</h4>
-              <h4 class="resume-item-details-duration">{{ school.duration }}</h4>
+          {% for hackathon in site.data.hackathons %}
+          <!-- Individual hackathons loaded by Liquid -->
+            <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
+              <h3 class="resume-item-title" itemprop="name">
+                {% if hackathon.website %}
+                  <a href="{{ hackathon.website }}">
+                    {{ hackathon.title }}
+                  </a>
+                {% else %}
+                  {{ hackathon.title }}
+                {% endif %}
+              </h3>
+
+	      <h4 class="resume-item-details" itemprop="description">{{ hackathon.event-name}}</h4>
+              <h4 class="resume-item-details" itemprop="description">{{ hackathon.date }}</h4>
+              <p class="resume-item-summary">{{ hackathon.summary }}</p>
             </div>
-            <p class="resume-item-summary">{{ school.summary }}</p>
-          </div>
-        {% endfor %}
-      </section>
+          {% endfor %}
+        </section>
       {% endif %}
+
+
 
       {% if site.skills_toggle %}
       <!-- Skills section -->
@@ -186,6 +228,7 @@
         {% endfor %}
       </section>
       {% endif %}
+
 
       <!-- Footer -->
       <footer class="site-footer">

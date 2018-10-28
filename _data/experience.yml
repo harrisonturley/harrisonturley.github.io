@@ -3,8 +3,8 @@
 - company: Logic&Form
   website: http://logicandform.com/
   position: Software Engineer Co-op
-  duration: May, 2018 &ndash; Present
-  summary: <ul class="resume-item-list"><li>Helped build and test an interactive user experience using Swift</li><li>Completed tasks efficiently, independently, and in an orgnized fashion</li></ul>
+  duration: May, 2018 &ndash; August, 2018
+  summary: <ul class="resume-item-list"><li>Developed new features for an interactive touch screen wall using Swift and the AppKit framework</li><li>Built and tested new menus and scalable interfaces to provide new ways to interactive with and visualize backend data</li><li>Analyzed and resolved bugs in previously created interfaces and legacy code to create a smoother user experience</li></ul>
 
 - company: Finger Food Studios
   website: https://www.fingerfoodstudios.com/
