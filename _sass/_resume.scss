@@ -22,9 +22,21 @@
   &:hover .icon-container {
     background-color: $dropdown-selected;
   }
+
+  &:active .dropdown-menu-content {
+    display:block;
+  }
+
+  &:active .icon-container {
+    background-color: $dropdown-selected;
+  }
 }
 
 .dropdown-menu-content a:hover {
+  background-color: $dropdown-selected;
+}
+
+.dropdown-menu-content a:active {
   background-color: $dropdown-selected;
 }
 
@@ -68,6 +80,7 @@
 
 .theme-default {
   margin: 0;
+  background-color: #F0F5F5;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -88,6 +101,7 @@
   border: 1px solid black;
   padding: 2rem 2rem 0.5rem;
   @include bottom_shadow;
+  background-color: #FFFFFF;
 
   .avatar {
     width: 200px;
@@ -133,9 +147,11 @@
   }
 
   .executive-summary {
+    @include sans;
+    font-size: 1rem;
     line-height: 1.75rem;
     @include media_larger_than_mobile {
-      font-size: 1.25rem;
+      font-size: 1rem;
     }
   }
 }
@@ -185,23 +201,83 @@
   }
 }
 
-.contact-button {
+.contact-button-wrap {
   @include sans;
-  background-color: #efefef;
-  text-decoration: none;
-  text-align: center;
-  display: block;
-  margin: 1.5rem auto;
-  width: 220px;
-  font-size: 1.3rem;
-  color: black;
-  line-height: 55px;
+  margin:0.7em auto;
+  width: 7em;
+  height: 2em;
+  font-size: 2.5rem;
+  position: relative;
+  -webkit-perspective: 800px;
+  perspective: 800px;
+  background:#FFFFFF;
+  border-radius:5px;
+  box-shadow:inset 0 0 0.2em 0 rgba(0,0,0,0.25);
 
-  @include transition(all 0.2s ease);
+  .inside {
+    width:100%;
+    padding:0.3em 0;
+    position:absolute;
+    text-align:center;
+    font-size:0.4em;
 
-  &:hover {
-    background-color: grey;
-    color: white;
+    .email-span {
+      color: #000000;
+      font-weight: bold;
+    }
+  }
+
+  .button {
+    @include contact_button_transform;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    cursor:pointer;
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+    z-index:2;
+
+    div {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius:5px;
+    }
+
+    .front {
+      background:#EFEFEF;
+      z-index:2;
+
+      span {
+        font-size:0.7em;
+        float:left;
+        width:100%;
+        padding:0.65em 0;
+        text-align:center;
+        color:#444444;
+      }
+    }
+
+    .back {
+      background:#333;
+      transform: rotateX( 180deg );
+      z-index:2;
+      box-shadow: 0 0.2em 0.2em 0 rgba(0,0,0,0.15);
+    }
+  }
+
+  &:hover .button {
+    -webkit-transform: rotateX(-150deg);
+    transform: rotateX(-150deg);
+  }
+
+  &:active .button {
+    -webkit-transform: rotateX(-150deg);
+    transform: rotateX(-150deg);
   }
 }
 
@@ -213,6 +289,7 @@
   padding: 2rem 1.5rem 0.5rem;
   margin: 3rem 0 0rem;
   @include bottom_shadow;
+  background-color: #FFFFFF;
 
   .section-header {
     @include section-break;
@@ -301,8 +378,9 @@
   }
 
   .resume-item-summary, .resume-item-list {
+    @include sans;
     margin: 0.75rem 0 0;
-    font-size: 1.1rem;
+    font-size: 1rem;
     li {
       padding: 0.3rem 0 0;
     }

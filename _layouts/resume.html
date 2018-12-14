@@ -25,10 +25,10 @@
           <div></div>
         </div>
         <div class="dropdown-menu-content">
-	  <a href="#education">Education</a>
+	        <a href="#education">Education</a>
           <a href="#experience">Experience</a>
           <a href="#projects">Projects</a>
-	  <a href="#hackathons">Hackathons</a>
+	        <a href="#hackathons">Hackathons</a>
           <a href="#skills">Skills</a>
         </div>
       </div>
@@ -58,7 +58,18 @@
         </div>
 
         <!-- Email button -->
-        <a href="mailto:{{ site.email }}" class="contact-button no-print" itemprop="email">Contact me</a>
+        <div class="contact-button-wrap">
+          <div class="inside">
+            <span class="email-span">Email:</span>
+            <span class="email-span-data">{{ site.email }}</span>
+          </div>
+          <div class="button">
+            <div class="front">
+              <span>Contact Me</span>
+            </div>
+            <div class="back"></div>
+          </div>
+        </div>
       </header>
 
 

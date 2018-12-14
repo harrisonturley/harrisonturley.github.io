@@ -38,3 +38,10 @@
   -moz-box-shadow: 0 6px 8px -2px #808080;
   box-shadow: 0 6px 8px -2px #808080;
 }
+
+@mixin contact_button_transform {
+  -webkit-transition:transform .28s ease-in;
+  -moz-transition:transform .28s ease-in;
+  -o-transition:transform .28s ease-in;
+  transition:transform .28s ease-in;
+}

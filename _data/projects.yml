@@ -3,14 +3,14 @@
 - title: Personal Portfolio
   website: https://github.com/harrisonturley/harrisonturley.github.io
   duration: May, 2018 &ndash; June, 2018
-  summary: <ul class="resume-item-list"> <li>Created using Jekyll, with HTML and SCSS</li><li>Created to provide consistent electronic access to my portfolio for anyone that is interested</li></ul>
+  summary: <ul class="resume-item-list"> <li>Created using <b>Jekyll</b>, with <b>HTML</b> and <b>SCSS</b></li><li>Created to provide consistent electronic access to my portfolio for anyone that is interested</li></ul>
 
 - title: Whack-A-Mole
   website: https://github.com/harrisonturley/Whack-A-Mole
   duration: August, 2017 &ndash; February, 2018
-  summary: <ul class="resume-item-list"> <li>Built a Whack-A-Mole app for Android using Java and Android's XML vocabulary as a personal project</li> <li>Designed, built and tested the app from start to finish to increase my knowledge in the major parts of project development</li> </ul>
+  summary: <ul class="resume-item-list"> <li>Built a Whack-A-Mole app for <b>Android</b> using <b>Java</b> and <b>Android's XML vocabulary</b> as a personal project</li> <li>Designed, built and tested the app from start to finish to increase my knowledge in the major parts of project development</li> </ul>
 
 - title: Particle Engine
   website: https://github.com/harrisonturley/ParticleEngyn
   duration: May, 2017 &ndash; July, 2017
-  summary: <ul class="resume-item-list"> <li>Created a basic particle engine as a personal project using Java and LWJGL 2</li> <li>Implemented functionality for loading models from .OBJ files and texturing with .PNG images, then displaying the models in a simulated universe window based on editable parameters</li> </ul>
+  summary: <ul class="resume-item-list"> <li>Created a basic particle engine as a personal project using <b>Java</b> and <b>LWJGL2</b></li> <li>Implemented functionality for loading models from .OBJ files and texturing with .PNG images, then displaying the models in a simulated universe window based on editable parameters</li> </ul>
