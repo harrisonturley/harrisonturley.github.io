@@ -4,10 +4,10 @@
   website: https://github.com/Judge24601/PoppyWatch
   event-name: Lumohacks
   date: September, 2018
-  summary: <ul class="resume-item-list"> <li>As a small team, built a system that allows first responders to record their health data via a FitBit app in traumatic situations, then later upload this data to a web app for customizing with comments for self-monitoring PTSD symptoms</li> <li>Implemented the rerading, writing, and editing of data between the web app and database with React and the Firebase API</li> </ul>
+  summary: <ul class="resume-item-list"> <li>As a small team, built a system that allows first responders to record their health data via a FitBit app in traumatic situations, then later upload this data to a web app for customizing with comments for self-monitoring PTSD symptoms</li> <li>Implemented the rerading, writing, and editing of data between the web app and database with <b>React</b> and the <b>Firebase API</b></li> </ul>
 
 - title: SafeTalk
   website: https://github.com/Judge24601/SafeTalk
   event-name: nwHacks
   date: January, 2018
-  summary: <ul class="resume-item-list"> <li>Constructed an Android app with 3 others in 24 hours for nwHacks 2018</li> <li>Created with the Android SDK, and Firebase for a backend real-time database</li> <li>The premise of the app was to allow the user to add a group of trusted friends and family, and could then send each other a distress SMS message with location attached with just the tap of a button when they felt in danger.  They could also see each other's last known location should a close friend go missing.</li> </ul>
+  summary: <ul class="resume-item-list"> <li>Constructed an <b>Android app</b> with 3 others in 24 hours for nwHacks 2018</li> <li>Created with the <b>Android SDK</b>, and <b>Firebase</b> for a backend real-time database</li> <li>The premise of the app was to allow the user to add a group of trusted friends and family, and could then send each other a distress SMS message with location attached with just the tap of a button when they felt in danger.  They could also see each other's last known location should a close friend go missing.</li> </ul>
