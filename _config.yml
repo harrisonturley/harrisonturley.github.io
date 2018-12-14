@@ -3,15 +3,15 @@
 title: Harrison Turley
 description: >-
   A portfolio of past projects and achievements by Harrison Turley.
-baseurl: ""
-url: ""
+baseurl: ''
+url: 'https://harrisonturley.github.io'
 github_username:  harrisonturley
 
 # Build settings
 markdown: kramdown
 sass:
     sass_dir: _sass
-    style: compressed
+    #style: compressed
 
 # Information and settings
 name:                 "Harrison Turley"
