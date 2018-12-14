@@ -11,7 +11,6 @@ github_username:  harrisonturley
 markdown: kramdown
 sass:
     sass_dir: _sass
-    #style: compressed
 
 # Information and settings
 name:                 "Harrison Turley"
