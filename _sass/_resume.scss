@@ -22,14 +22,6 @@
   &:hover .icon-container {
     background-color: $dropdown-selected;
   }
-
-  &:active .dropdown-menu-content {
-    display:block;
-  }
-
-  &:active .icon-container {
-    background-color: $dropdown-selected;
-  }
 }
 
 .dropdown-menu-content a:hover {
@@ -90,7 +82,7 @@
 .wrapper {
   width: 650px;
   @media screen and (max-width: 1280px) {
-    width: 80%;
+    width: 90%;
   }
 
   margin-left: auto;
@@ -209,7 +201,7 @@
 .contact-button-wrap {
   @include sans;
   margin:0.7em auto;
-  width: 7em;
+  width: 6em;
   height: 2em;
   font-size: 2.5rem;
   position: relative;
@@ -224,7 +216,7 @@
     padding:0.3em 0;
     position:absolute;
     text-align:center;
-    font-size:0.4em;
+    font-size:0.35em;
 
     .email-span {
       color: #000000;
@@ -280,10 +272,10 @@
     transform: rotateX(-150deg);
   }
 
-  &:active .button {
-    -webkit-transform: rotateX(-150deg);
-    transform: rotateX(-150deg);
-  }
+ // &:active .button {
+ //   -webkit-transform: rotateX(-150deg);
+ //   transform: rotateX(-150deg);
+ // }
 }
 
 ////////////////////////////////////////////////////////////////////////////////
