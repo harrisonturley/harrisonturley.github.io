@@ -4,7 +4,7 @@
   website: https://github.com/Judge24601/PoppyWatch
   event-name: Lumohacks
   date: September, 2018
-  summary: <ul class="resume-item-list"> <li>As a small team, built a system that allows first responders to record their health data via a FitBit app in traumatic situations, then later upload this data to a web app for customizing with comments for self-monitoring PTSD symptoms</li> <li>Implemented the rerading, writing, and editing of data between the web app and database with <b>React</b> and the <b>Firebase API</b></li> </ul>
+  summary: <ul class="resume-item-list"> <li>As a small team, built a system that allows first responders to record their health data via a FitBit app in traumatic situations, then later upload this data to a web app for customizing with comments for self-monitoring PTSD symptoms</li> <li>Implemented the reading, writing, and editing of data between the web app and database with <b>React</b> and the <b>Firebase API</b></li> </ul>
 
 - title: SafeTalk
   website: https://github.com/Judge24601/SafeTalk

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv = "X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>{% if page.title %} {{ page.title }} {% else %} {{ site.title }} {% endif %}</title>
 
@@ -18,7 +18,7 @@
   <body class="theme-default">
 
     <div class="site-header" id="sticky-header">
-      <div class="dropdown-menu">
+      <div class="dropdown-menu no-print">
         <div class="icon-container">
           <div></div>
           <div></div>
@@ -53,9 +53,9 @@
         </div>
 
         <!-- Full executive summary, as defined in config -->
-        <div class="executive-summary" itemprop="description">
+        <p class="executive-summary" itemprop="description">
           {{ site.summary }}
-        </div>
+        </p>
 
         <!-- Email button -->
         <div class="contact-button-wrap">
