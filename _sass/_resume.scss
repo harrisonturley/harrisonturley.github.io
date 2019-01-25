@@ -82,8 +82,8 @@
 
 .wrapper {
   width: 650px;
-  @media screen and (max-width: 1280px) {
-    width: 90%;
+  @media screen and (max-width: 680px) {
+    width: 95%;
   }
 
   margin-left: auto;
@@ -100,6 +100,9 @@
   padding: 2rem 2rem 0.5rem;
   @include bottom_shadow;
   background-color: #FFFFFF;
+  @media screen and (max-width: 680px) {
+    margin-top: 5%;
+  }
 
   .avatar {
     width: 200px;
