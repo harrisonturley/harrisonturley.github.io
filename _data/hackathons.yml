@@ -1,5 +1,10 @@
 # Hackathons data
-
+- title: Meeting Minutes
+  website: https://github.com/harrisonturley/meeting-minutes-extension
+  event-name: nwHacks 2019
+  date: January, 2019
+  summary: <ul class="resume-item-list"> <li>As a team of four, implemented a mobile app to transcribe any meeting ussing <b>Azure's</b> Speech to Text API</li> <li>Contributed the bridge communication between the <b>React-Native</b> frontend and <b>Android Java</b> modules, the <b>Java</b> modules themselves, and their communication to <b>Azure</b></li> <li>As a personal project outside of the hackathon, currently adding <b>Azure's</b> Voice Recognition to identify each person speaking</li> </ul>
+  
 - title: PoppyWatch
   website: https://github.com/Judge24601/PoppyWatch
   event-name: Lumohacks
@@ -8,6 +13,6 @@
 
 - title: SafeTalk
   website: https://github.com/Judge24601/SafeTalk
-  event-name: nwHacks
+  event-name: nwHacks 2018
   date: January, 2018
   summary: <ul class="resume-item-list"> <li>Constructed an <b>Android app</b> with 3 others in 24 hours for nwHacks 2018</li> <li>Created with the <b>Android SDK</b>, and <b>Firebase</b> for a backend real-time database</li> <li>The premise of the app was to allow the user to add a group of trusted friends and family, and could then send each other a distress SMS message with location attached with just the tap of a button when they felt in danger.  They could also see each other's last known location should a close friend go missing.</li> </ul>
