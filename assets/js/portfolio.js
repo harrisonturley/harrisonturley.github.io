@@ -54,6 +54,8 @@ window.onload = function() {
 
     document.getElementById('bg-image').style.height = window.getComputedStyle(document.getElementById('page-header')).height;
     document.getElementById('bg-image-behind').style.height = window.getComputedStyle(document.getElementById('page-header')).height;
+
+    $(window).trigger('scroll');
 };
 
 (function ($) {
@@ -66,7 +68,6 @@ window.onload = function() {
         offset: navHeight
     });
 
-    $(window).trigger('scroll');
     $(window).on('scroll', function() {
         var pixels = 50; 
         var top = 1200;
