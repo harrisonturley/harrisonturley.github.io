@@ -1,23 +1,56 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv = "X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Title of the page -->
     <title>{% if page.title %} {{ page.title }} {% else %} {{ site.title }} {% endif %}</title>
 
+    <!-- Sans font -->
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:400,300,800,700' rel='stylesheet' type='text/css'>
 
     <meta name="description" content="{% if page.excerpt %} {{ page.excerpt | strip_html | strip_newlines | truncate: 160 }} {% endif %}">
 
+    <!-- CSS for the page -->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/animate.min.css">
+
+    <!-- Icon for the page -->
     <link rel="shortcut icon" type="image/png" href = "/images/favicon.png">
   </head>
 
-  <body class="theme-default">
+  <body class="theme-default" id="portfolio-body">
 
-    <div class="site-header" id="sticky-header">
+    <nav class="navbar navbar-trans navbar-expand-md fixed-top" id="main-nav">
+      <div class="container">
+        <a class="navbar-name js-scroll" href="#portfolio-body">{{ site.title }}</a>
+        <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
+          <ul class="navbar-links">
+            <li class="nav-item">
+              <a class="nav-link js-scroll active" href="#education">EDUCATION</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll" href="#experience">EXPERIENCE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll" href="#projects">PROJECTS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll" href="#hackathons">HACKATHONS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll" href="#skills">SKILLS</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <!-- <div class="site-header" id="sticky-header">
       <div class="dropdown-menu no-print">
         <div class="icon-container">
           <div></div>
@@ -32,13 +65,13 @@
           <a href="#skills">Skills</a>
         </div>
       </div>
-    </div>
-
+    </div> -->
     
     <div class="bg-image-behind", id="bg-image-behind"></div>
     <div class="bg-image" id="bg-image"></div>
     
     <header class="page-header" id="page-header">
+      <div class="page-header-top"></div>
       <!-- Personal avatar, rendered depending on config settings -->
       {% if site.avatar == 'true' %}
         <img src="images/profilepic.jpg" alt="my photo" class="avatar no-print" itemprop="image">
@@ -264,7 +297,14 @@
       </footer>
     </div>
     
+    <!-- Library JS -->
     <script src="/assets/js/jquery-3.3.1.min.js"></script>
-    <script src="/assets/js/TypingAnimation.js"></script>
+    <script src="/assets/js/jquery-migrate.min.js"></script>
+    <script src="/assets/js/easing.min.js"></script>
+    <script src="/assets/js/popper.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+
+    <!-- Portfolio JS -->
+    <script src="/assets/js/portfolio.js"></script>
   </body>
 </html>

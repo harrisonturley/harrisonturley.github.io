@@ -12,7 +12,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 // Hamburger dropdown menu styling
 
-.dropdown-menu {
+/*.dropdown-menu {
   position: relative;
   display: inline-block;
   z-index: 6;
@@ -75,7 +75,7 @@
     font-size: 1rem;
     @include sans;
   }
-}
+}*/
 
 ////////////////////////////////////////////////////////////////////////////////
 // Styling for the entire website
@@ -112,7 +112,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  //height: 700px;
   transform: scale(1.02);
 }
 
@@ -124,7 +123,6 @@
   background-size: cover;
   position: absolute;
   overflow: hidden;
-  //height: 700px;
 }
 
 
@@ -136,7 +134,196 @@
 }
 
 ////////////////////////////////////////////////////////////////////////////////
-// Header styling
+// Navbar styling
+
+/*.navbar {
+  transition: all .5s ease-in-out;
+  background-color: transparent;
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
+
+  .nav-item {
+    display: inline-block;
+    position: relative;
+    padding-right: 10px;
+    padding-left: 0; 
+  }
+
+  .nav-link { 
+    color: #FFF;
+    font-weight: 600;
+    width: 35px;
+  }
+
+  .nav-link:before {
+    content: '';
+    position: absolute;
+    margin-left: 0px;
+    width: 0%;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    transition: all 500ms ease;
+  }
+
+  .navbar-trans .nav-link:before {
+    background-color: #FFF;
+  }
+
+  .navbar-trans .nav-link:hover {
+    color: #FFF;
+  }
+
+  .navbar-name {
+    color: #FFF;
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+
+  .navbar-reduce {
+    transition: all .5s ease-in-out;
+    background-color: #FFF;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .navbar-reduce .nav-link {
+    color: #0078FF;
+  }
+
+  .navbar-reduce .navlink-before {
+    background-color: #0078FF;
+  }
+
+  .navbar-reduce .nav-link:hover {
+    color: #0078FF;
+  }
+
+  .navbar-reduce .navbar-name {
+    color: #0078FF;
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+}*/
+
+.navbar {
+  transition: all .5s ease-in-out;
+  background-color: transparent;
+  padding-top: 1.563rem;
+  padding-bottom: 1.563rem;
+}
+
+.navbar-nav {
+  list-style: none;
+}
+
+.navbar.navbar-reduce {
+  box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.06);
+}
+
+.navbar.navbar-trans .nav-item,
+.navbar.navbar-reduce .nav-item {
+  display: inline-block;
+  position: relative;
+  padding-right: 10px;
+  padding-left: 0;
+}
+
+.navbar.navbar-trans .nav-link,
+.navbar.navbar-reduce .nav-link {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.navbar.navbar-trans .nav-link:before,
+.navbar.navbar-reduce .nav-link:before {
+  content: '';
+  position: absolute;
+  margin-left: 0px;
+  width: 0%;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  transition: all 500ms ease;
+}
+
+.navbar.navbar-trans .nav-link:hover,
+.navbar.navbar-reduce .nav-link:hover {
+  color: #1B1B1B;
+}
+
+.navbar.navbar-trans .nav-link:hover:before,
+.navbar.navbar-reduce .nav-link:hover:before {
+  width: 35px;
+}
+
+.navbar.navbar-trans .show > .nav-link:before,
+.navbar.navbar-trans .active > .nav-link:before,
+.navbar.navbar-trans .nav-link.show:before,
+.navbar.navbar-trans .nav-link.active:before,
+.navbar.navbar-reduce .show > .nav-link:before,
+.navbar.navbar-reduce .active > .nav-link:before,
+.navbar.navbar-reduce .nav-link.show:before,
+.navbar.navbar-reduce .nav-link.active:before {
+  width: 35px;
+}
+
+.navbar.navbar-trans .nav-link:before {
+  background-color: #fff;
+}
+
+.navbar.navbar-trans .nav-link:hover {
+  color: #fff;
+}
+
+.navbar.navbar-trans .show > .nav-link,
+.navbar.navbar-trans .active > .nav-link,
+.navbar.navbar-trans .nav-link.show,
+.navbar.navbar-trans .nav-link.active {
+  color: #fff;
+}
+
+.navbar.navbar-reduce {
+  transition: all .5s ease-in-out;
+  background-color: #fff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.navbar.navbar-reduce .nav-link {
+  color: #0078ff;
+}
+
+.navbar.navbar-reduce .nav-link:before {
+  background-color: #0078ff;
+}
+
+.navbar.navbar-reduce .nav-link:hover {
+  color: #0078ff;
+}
+
+.navbar.navbar-reduce .show > .nav-link,
+.navbar.navbar-reduce .active > .nav-link,
+.navbar.navbar-reduce .nav-link.show,
+.navbar.navbar-reduce .nav-link.active {
+  color: #0078ff;
+}
+
+.navbar.navbar-reduce .navbar-name {
+  color: #0078ff;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.navbar.navbar-trans .navbar-name {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// Home styling
 
 .page-header {
   padding: 0rem 8rem 0.5rem;
@@ -149,8 +336,13 @@
     margin-top: 8px;
   }
 
+  .page-header-top {
+    width: 100%;
+    height: 0px;
+    padding-top: 5rem;
+  }
+
   .avatar {
-    padding-top: 2rem;
     width: 200px;
     height: 200px;
     max-width: 100%;
