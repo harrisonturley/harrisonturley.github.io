@@ -34,46 +34,63 @@
       </div>
     </div>
 
+    
+    <div class="bg-image-behind", id="bg-image-behind"></div>
+    <div class="bg-image" id="bg-image"></div>
+    
+    <header class="page-header" id="page-header">
+      <!-- Personal avatar, rendered depending on config settings -->
+      {% if site.avatar == 'true' %}
+        <img src="images/profilepic.jpg" alt="my photo" class="avatar no-print" itemprop="image">
+      {% endif %}
+
+      <!-- Name for the top of the resume -->
+      <h1 class="header-resume-name" itemprop="resume-name">{{site.name}}</h1>
+
+      <div class="title-bar no-print">
+        <!-- Title to appear at the top of the resume -->
+        <h2 class="header-title" itemprop="jobTitle">{{site.personal_title}}</h2>
+
+        <!-- Icon links in an include due to repetion -->
+        {% include icon-links.html %}
+      </div>
+
+      <h1 class="typing-animation">I love
+        <span
+          class="text-rotate"
+          data-period="2000"
+          data-rotate='[ "coding!", "learning new technologies.", "the outdoors.", "the indoors.", "building collaboratively :^)", "creating." ]'>
+        </span>
+      </h1>
+
+      <!-- Full executive summary, as defined in config -->
+      <p class="executive-summary" itemprop="description">
+        {{ site.summary }}
+      </p>
+
+      <!-- Email button -->
+      <div class="contact-button-wrap">
+        <div class="inside">
+          <span class="email-span">Email:</span>
+          <span class="email-span-data">{{ site.email }}</span>
+        </div>
+        <div class="button">
+          <div class="front">
+            <span>Contact Me</span>
+          </div>
+          <div class="back"></div>
+        </div>
+      </div>
+
+      <div class="learn-more-header">
+        <p class="learn-more">Learn more about what I do</p>
+        <p class="learn-more-down-arrow">v</p>
+      </div>
+    </header>
+    
+    <div class="background-cutoff"></div>
+
     <div class="wrapper" itemscope itemtype = "http://schema.org/Person">
-      <header class="page-header">
-        <!-- Personal avatar, rendered depending on config settings -->
-        {% if site.avatar == 'true' %}
-          <img src="images/profilepic.jpg" alt="my photo" class="avatar no-print" itemprop="image">
-        {% endif %}
-
-        <!-- Name for the top of the resume -->
-        <h1 class="header-resume-name" itemprop="resume-name">{{site.name}}</h1>
-
-        <div class="title-bar no-print">
-          <!-- Title to appear at the top of the resume -->
-          <h2 class="header-title" itemprop="jobTitle">{{site.personal_title}}</h2>
-
-          <!-- Icon links in an include due to repetion -->
-          {% include icon-links.html %}
-        </div>
-
-        <!-- Full executive summary, as defined in config -->
-        <p class="executive-summary" itemprop="description">
-          {{ site.summary }}
-        </p>
-
-        <!-- Email button -->
-        <div class="contact-button-wrap">
-          <div class="inside">
-            <span class="email-span">Email:</span>
-            <span class="email-span-data">{{ site.email }}</span>
-          </div>
-          <div class="button">
-            <div class="front">
-              <span>Contact Me</span>
-            </div>
-            <div class="back"></div>
-          </div>
-        </div>
-      </header>
-
-
-
       {% if site.education_toggle %}
       <!-- Education section -->
       <section class="content-section" id="education">
@@ -207,7 +224,7 @@
                 {% endif %}
               </h3>
 
-	      <h4 class="resume-item-details" itemprop="description">{{ hackathon.event-name}}</h4>
+        <h4 class="resume-item-details" itemprop="description">{{ hackathon.event-name}}</h4>
               <h4 class="resume-item-details" itemprop="description">{{ hackathon.date }}</h4>
               <p class="resume-item-summary">{{ hackathon.summary }}</p>
             </div>
@@ -246,5 +263,8 @@
         <p class="footer-line">If you would like to get in contact with me, please feel free to email me at <a href="mailto:{{ site.email }}" class="footer-email">{{ site.email }}</a>
       </footer>
     </div>
+    
+    <script src="/assets/js/jquery-3.3.1.min.js"></script>
+    <script src="/assets/js/TypingAnimation.js"></script>
   </body>
 </html>

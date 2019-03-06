@@ -101,21 +101,56 @@
   }
 }
 
+.bg-image {
+  background-image: url("../images/background.PNG");
+  width: 100%;
+  filter: blur(6px);
+  -webkit-filter: blur(6px);
+  -moz-filter: blur(6px);
+  -ms-filter: blur(6px); 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  //height: 700px;
+  transform: scale(1.02);
+}
+
+.bg-image-behind {
+  background-image: url("../images/background.PNG");
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  overflow: hidden;
+  //height: 700px;
+}
+
+
+.background-cutoff {
+  position: relative;
+  height: 25px;
+  transform: translate(0px, -5px);
+  background-color: #EAF5F5;
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 // Header styling
 
 .page-header {
-  margin-top: 1.5rem;
-  border: 1px solid black;
-  padding: 2rem 2rem 0.5rem;
-  background-color: #FFFFFF;
-  @include bottom_shadow;
+  padding: 0rem 8rem 0.5rem;
+  position: relative;
+  top: 0;
+  left: 0;
+  color: white;
   
   @media screen and (max-width: 680px) {
     margin-top: 8px;
   }
 
   .avatar {
+    padding-top: 2rem;
     width: 200px;
     height: 200px;
     max-width: 100%;
@@ -127,12 +162,25 @@
 
   .header-resume-name {
     font-size: 3rem;
-    font-weight: 900;
+    font-weight: 600;
     text-align: center;
     letter-spacing: -0.15rem;
     line-height: 1;
     margin: 1rem 0 0;
+    color: white;
     @include sans;
+  }
+
+  .typing-animation {
+    font-weight: 100;
+    font-size: 2.5em;
+    margin: 0.4em 0;
+    text-align: center;
+    @include sans;
+    
+    .text-rotate {
+      border-right: 0.08em solid #FFF;
+    }
   }
 
   .title-bar {
@@ -159,8 +207,10 @@
   }
 
   .executive-summary {
+    padding: 0.35em;
     font-size: 1rem;
     line-height: 1.75rem;
+    text-align: center;
     @include sans;
 
     @include media_larger_than_mobile {
@@ -216,7 +266,7 @@
 
 .contact-button-wrap {
   @include sans;
-  margin:0.7em auto;
+  margin: 0.7em auto;
   width: 6em;
   height: 2em;
   font-size: 2.5rem;
@@ -236,9 +286,13 @@
     font-size:0.35em;
 
     .email-span {
-      color: #000000;
+      color: #000;
       font-weight: bold;
       position: relative;
+    }
+
+    .email-span-data {
+      color: #000;
     }
   }
 
@@ -288,6 +342,21 @@
   &:hover .button {
     -webkit-transform: rotateX(-150deg);
     transform: rotateX(-150deg);
+  }
+}
+
+.learn-more-header {
+  text-align: center;
+  @include sans;
+
+  .learn-more {
+    margin-bottom: 0;
+    margin-top: 2em;
+    font-size: 1.2em;
+  }
+
+  .learn-more-down-arrow {
+    margin-top: 0;
   }
 }
 
