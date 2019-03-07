@@ -264,7 +264,7 @@
 // Home styling
 
 .page-header {
-  background-image: url("/images/background.png");
+  background-image: url("/images/background.PNG");
   position: relative;
   width: 100%;
   height: 100vh;
@@ -358,7 +358,6 @@
   }
 
   .icon-link-item {
-    //display: inline-block;
     margin-left: 5px;
     margin-right: 5px;
     margin-top: 10px;
@@ -366,7 +365,6 @@
   }
 
   .icon-link-github {
-    //display: inline-block;
 
     &:hover .icon path {
       fill: black;
