@@ -362,25 +362,25 @@
     margin-bottom: 10px;
   }
 
-  .icon-link-github {
-
-    &:hover .icon path {
-      fill: black;
-      @include transition(all 0.2s ease);
-    }
-  }
-
-  .icon-link-linkedin {
-    display: inline-block;
-
-    &:hover .icon path {
-      fill: #0077B5;
-      @include transition(all 0.2s ease);
-    }
-  }
-
   .icon {
     height: 28px;
+  }
+}
+
+.icon-link-github {
+
+  &:hover .icon path {
+    fill: black;
+    @include transition(all 0.2s ease);
+  }
+}
+
+.icon-link-linkedin {
+  display: inline-block;
+
+  &:hover .icon path {
+    fill: #0077B5;
+    @include transition(all 0.2s ease);
   }
 }
 
@@ -437,6 +437,10 @@
     background-color: #0078ff;
     width: 100px;
     bottom: -12px;
+  }
+
+  .about-link {
+    margin-bottom: 1rem;
   }
 
   .bio-title-container {
