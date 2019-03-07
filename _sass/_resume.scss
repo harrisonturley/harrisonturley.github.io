@@ -340,6 +340,53 @@
   text-decoration: none;
 }
 
+
+.icon-links {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  top: 30vh;
+  left: 5px;
+  text-align: left;
+  
+
+  @include media_larger_than_mobile {
+    border-top: none;
+    padding-top: 15px;
+    top: 50vh;
+  }
+
+  .icon-link-item {
+    //display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .icon-link-github {
+    //display: inline-block;
+
+    &:hover .icon path {
+      fill: black;
+      @include transition(all 0.2s ease);
+    }
+  }
+
+  .icon-link-linkedin {
+    display: inline-block;
+
+    &:hover .icon path {
+      fill: #0077B5;
+      @include transition(all 0.2s ease);
+    }
+  }
+
+  .icon {
+    height: 28px;
+  }
+}
 /*
 .page-header {
   padding: 0rem 8rem 0.5rem;
@@ -430,48 +477,8 @@
 ////////////////////////////////////////////////////////////////////////////////
 // Icon Styling
 
-.icon-links {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  top: 4px;
-  text-align: center;
-  padding-top: 0.4rem;
 
-  @include media_larger_than_mobile {
-    float: right;
-    border-top: none;
-    padding-top: 0;
-  }
-
-  .icon-link-item {
-    display: inline-block;
-    margin-left: 5px;
-  }
-
-  .icon-link-github {
-    display: inline-block;
-
-    &:hover .icon path {
-      fill: black;
-      @include transition(all 0.2s ease);
-    }
-  }
-
-  .icon-link-linkedin {
-    display: inline-block;
-
-    &:hover .icon path {
-      fill: #0077B5;
-      @include transition(all 0.2s ease);
-    }
-  }
-
-  .icon {
-    height: 28px;
-  }
-}
-
+/*
 .contact-button-wrap {
   @include sans;
   margin: 0.7em auto;
@@ -551,7 +558,7 @@
     -webkit-transform: rotateX(-150deg);
     transform: rotateX(-150deg);
   }
-}
+}*/
 
 .learn-more-header {
   text-align: center;
