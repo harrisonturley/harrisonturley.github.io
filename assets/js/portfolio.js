@@ -51,7 +51,7 @@ window.onload = function() {
             new TextRotate(elements[i], JSON.parse(toRotate), period);
         }
     }
-    
+
     $(window).trigger('scroll');
 };
 
@@ -70,15 +70,23 @@ window.onload = function() {
 
     $(window).on('scroll', function() {
         var pixels = 50; 
-        console.log('called');
         if ($(window).scrollTop() > pixels) {
             $('.navbar-expand-md').addClass('navbar-reduce');
             $('.navbar-expand-md').removeClass('navbar-trans');
-            console.log('here');
         } else {
             $('.navbar-expand-md').addClass('navbar-trans');
             $('.navbar-expand-md').removeClass('navbar-reduce');
-            console.log('or here');
         }
+
+        if ($(window).scrollTop() > 50) {
+            $('.back-to-top').fadeIn('slow');
+        } else {
+            $('.back-to-top').fadeOut('slow');
+        }
+    });
+
+    $('.back-to-top').click(function(){
+        $('html, body').animate({scrollTop : 0},1500, 'easeInOutExpo');
+        return false;
     });
 })(jQuery);
