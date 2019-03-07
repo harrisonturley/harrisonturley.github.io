@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/animate.min.css">
+    <link rel="stylesheet" href="/assets/css/ionicons.min.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
 
     <!-- Icon for the page -->
     <link rel="shortcut icon" type="image/png" href = "/images/favicon.png">
@@ -26,7 +28,7 @@
     <!-- Navigation header bar -->
     <nav class="navbar navbar-trans navbar-expand-md fixed-top" id="main-nav">
       <div class="container">
-        <a class="navbar-name js-scroll" href="#portfolio-body">{{ site.title }}</a>
+        <a class="navbar-brand js-scroll" href="#portfolio-body">{{ site.title }}</a>
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
         aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
           <span></span>
@@ -55,25 +57,49 @@
       </div>
     </nav>
     
+    <!-- Home screen -->
+    <div class="page-header">
+      <div class="page-header-content">
+        <div class="page-header-cell">
+          {% if site.avatar == 'true' %}
+            <img src="images/profilepic.jpg" alt="my photo" class="avatar no-print" itemprop="image">
+          {% endif %}
+          <h1 class="page-header-title">Hi! I'm Harrison Turley.</h1>
+          <h2 class="typing-animation">I love
+            <span
+              class="text-rotate"
+              data-period="2000"
+              data-rotate='[ "coding!", "learning new technologies.", "the outdoors.", "the indoors.", "building collaboratively :^)", "creating." ]'>
+            </span>
+          </h2>
+        </div>
+      </div>
+      <a href="#education" class="page-header-bottom">
+        <p class="learn-more">Learn more about me</p>
+        <i class="fa fa-chevron-down"></i>
+      </a>
+    </div>
+
+    <!-- 
     <div class="bg-image-behind", id="bg-image-behind"></div>
     <div class="bg-image" id="bg-image"></div>
     
     <header class="page-header" id="page-header">
       <div class="page-header-top"></div>
-      <!-- Personal avatar, rendered depending on config settings -->
+      <!-- Personal avatar, rendered depending on config settings 
       {% if site.avatar == 'true' %}
         <img src="images/profilepic.jpg" alt="my photo" class="avatar no-print" itemprop="image">
       {% endif %}
 
-      <!-- Name for the top of the resume -->
+      <!-- Name for the top of the resume 
       <h1 class="header-resume-name" itemprop="resume-name">{{site.name}}</h1>
 
       <div class="title-bar no-print">
-        <!-- Title to appear at the top of the resume -->
+        <!-- Title to appear at the top of the resume 
         <h2 class="header-title" itemprop="jobTitle">{{site.personal_title}}</h2>
 
-        <!-- Icon links in an include due to repetion -->
-        {% include icon-links.html %}
+        <!-- Icon links in an include due to repetion 
+        
       </div>
 
       <h1 class="typing-animation">I love
@@ -84,12 +110,12 @@
         </span>
       </h1>
 
-      <!-- Full executive summary, as defined in config -->
+      <!-- Full executive summary, as defined in config 
       <p class="executive-summary" itemprop="description">
         {{ site.summary }}
       </p>
 
-      <!-- Email button -->
+      <!-- Email button 
       <div class="contact-button-wrap">
         <div class="inside">
           <span class="email-span">Email:</span>
@@ -110,6 +136,7 @@
     </header>
     
     <div class="background-cutoff"></div>
+  -->
 
     <div class="wrapper" itemscope itemtype = "http://schema.org/Person">
       {% if site.education_toggle %}
@@ -284,6 +311,11 @@
         <p class="footer-line">If you would like to get in contact with me, please feel free to email me at <a href="mailto:{{ site.email }}" class="footer-email">{{ site.email }}</a>
       </footer>
     </div>
+
+    <!-- Scroll up chevron -->
+    <a href="#" class="back-to-top">
+      <i class="fa fa-chevron-up"></i>
+    </a>
     
     <!-- Library JS -->
     <script src="/assets/js/jquery-3.3.1.min.js"></script>
