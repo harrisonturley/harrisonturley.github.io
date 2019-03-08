@@ -494,19 +494,19 @@
 ////////////////////////////////////////////////////////////////////////////////
 // Content section styling
 
-.experience-header {
+.section-header {
   vertical-align: center;
   text-align: center;
   padding-bottom: 1.5rem;
 }
 
-.experience-title {
+.section-title {
   font-weight: 600;
   font-size: 2rem;
   position: relative;
 }
 
-.experience-title:before {
+.section-title:before {
   content: '';
   position: absolute;
   height: 3px;
@@ -586,6 +586,38 @@
     text-align: center;
     padding: 30px;
     height: 110px;
+    border-radius: 0 0 3px 3px;
+
+    h4 {
+      font-size: 18px;
+      line-height: 1px;
+      font-weight: 700;
+      margin-bottom: 18px;
+      padding-bottom: 0;
+
+      a {
+        color: #333;
+      }
+
+      a:hover {
+        color: #0078FF;
+      }
+    }
+
+    p {
+      padding: 0;
+      margin: 0;
+      color: #b8b8b8;
+      font-weight: 500;
+      font-size: 14px;
+    }
+  }
+
+  .personal-project-info {
+    background: #fff;
+    text-align: center;
+    padding: 30px;
+    height: 90px;
     border-radius: 0 0 3px 3px;
 
     h4 {

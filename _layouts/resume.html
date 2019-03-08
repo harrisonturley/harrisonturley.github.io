@@ -44,7 +44,7 @@
               <a class="nav-link js-scroll" href="#experience">EXPERIENCE</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll" href="#projects">PROJECTS</a>
+              <a class="nav-link js-scroll" href="#personal-projects">PROJECTS</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll" href="#hackathons">HACKATHONS</a>
@@ -82,6 +82,7 @@
 
     {% include icon-links.html %}
 
+    <!-- About Me Section-->
     <div id="about-me" class="about-me section-lg">
       <div class="container">
         <div class="row">
@@ -159,10 +160,11 @@
       </div>
     </div>
 
+    <!-- Work Experience Section -->
     <div id="experience" class="experience section-lg">
       <div class="container">
-        <div class="experience-header">
-          <h3 class="experience-title">Work Experience</h3>
+        <div class="section-header">
+          <h3 class="section-title">Work Experience</h3>
         </div>
         <div class="row experience-container">
           <div class="col-lg-4 col-md-6 project-item">
@@ -332,43 +334,175 @@
       </div>
     </div>
 
+    <!-- Personal Projects Section -->
+    <div id="personal-projects" class="personal-projects section-lg">
+      <div class="container">
+        <div class="section-header">
+          <h3 class="section-title">Personal Projects</h3>
+        </div>
+        <div class="row experience-container">
+          <div class="col-lg-4 col-md-6 project-item">
+            <div class="project-wrap">
+              <figure>
+                <img src="images/portfolio.PNG" class="img-fluid" alt="">
+                <a href="#portfolioModal" data-toggle="modal" class="link-details" title="More Details"><i class="ion ion-eye"></i></a>
+              </figure>
+              <div class="personal-project-info">
+                <h4 class="project-title"><a href="#portfolioModal" data-toggle="modal">Personal Portfolio</a></h4>
+                <p class="project-timeline">May, 2018 - June, 2018</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 project-item">
+            <div class="project-wrap">
+              <figure>
+                <img src="images/whack-a-mole.jpg" class="img-fluid" alt="">
+                <a href="#whackAMoleModal" data-toggle="modal" class="link-details" title="More Details"><i class="ion ion-eye"></i></a>
+              </figure>
+              <div class="personal-project-info">
+                <h4 class="project-title"><a href="#whackAMoleModal" data-toggle="modal">Whack-A-Mole</a></h4>
+                <p class="project-timeline">August, 2017 - February, 2018</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 project-item">
+            <div class="project-wrap">
+              <figure>
+                <img src="images/particle-engine.PNG" class="img-fluid" alt="">
+                <a href="#particleEngineModal" data-toggle="modal" class="link-details" title="More Details"><i class="ion ion-eye"></i></a>
+              </figure>
+              <div class="personal-project-info">
+                <h4 class="project-title"><a href="#particleEngineModal" data-toggle="modal">Particle Engine</a></h4>
+                <p class="project-timeline">May, 2017 - July, 2017</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="portfolioModal" tabindex="-1" role="dialog" aria-labelledby="experienceModal" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="title-container">
+                    <h3 class="title">Personal Portfolio</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <img src="images/portfolio.PNG" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-8">
+                    <p><span class="text-bolded">Duration: </span> May, 2018 - June, 2018</p>
+                    <p><span class="text-bolded">GitHub Repo: </span><a href="https://github.com/harrisonturley/harrisonturley.github.io">https://github.com/harrisonturley/harrisonturley.github.io</a></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <ul class="resume-item-list"> 
+                    <li>Created using <b>Bootstrap 4</b>, <b>Jekyll</b>, with <b>HTML</b> and <b>SCSS</b></li>
+                    <li>Created to provide consistent electronic access to my portfolio for anyone that is interested</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="whackAMoleModal" tabindex="-1" role="dialog" aria-labelledby="experienceModal" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="title-container">
+                    <h3 class="title">Whack-A-Mole</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <img src="images/whack-a-mole.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-8">
+                    <p><span class="text-bolded">Duration: </span> August, 2017 - February, 2018</p>
+                    <p><span class="text-bolded">GitHub Repo: </span><a href="https://github.com/harrisonturley/whack-a-mole">https://github.com/harrisonturley/whack-a-mole</a></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                    <ul class="resume-item-list"> 
+                      <li>Built a Whack-A-Mole app for <b>Android</b> using <b>Java</b> and <b>Android's XML vocabulary</b> as a personal project</li> 
+                      <li>Designed, built and tested the app from start to finish to increase my knowledge in the major parts of project development</li> 
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="particleEngineModal" tabindex="-1" role="dialog" aria-labelledby="experienceModal" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="title-container">
+                    <h3 class="title">Particle Engine</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <img src="images/particle-engine.PNG" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-8">
+                    <p><span class="text-bolded">Duration: </span> May, 2017 - July, 2017</p>
+                    <p><span class="text-bolded">GitHub Repo: </span><a href="https://github.com/harrisonturley/particle-engyn">https://github.com/harrisonturley/particle-engyn</a></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                    <ul class="resume-item-list"> 
+                      <li>Created a basic particle engine as a personal project using <b>Java</b> and <b>LWJGL2</b></li> 
+                      <li>Implemented functionality for loading models from .OBJ files and texturing with .PNG images, then displaying the models in a simulated universe window based on editable parameters</li> 
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     <div class="wrapper" itemscope itemtype = "http://schema.org/Person">
 
-      {% if site.projects_toggle %}
-      <!-- Project section -->
-        <section class="content-section" id="projects">
-
-          <!-- Main title for project section -->
-          <header class="section-header">
-            <h2 class="section-title">Personal Projects</h2>
-            <!-- Section icon -->
-            <a href="#projects" itemprop="sameAs">
-              {% include icons/icon-projects.html %}
-            </a>
-          </header>
-
-          {% for project in site.data.projects %}
-          <!-- Individual projects loaded by Liquid -->
-            <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
-              <h3 class="resume-item-title" itemprop="name">
-                {% if project.website %}
-                  <a href="{{ project.website }}">
-                    {{ project.title }}
-                  </a>
-                {% else %}
-                  {{ project.title }}
-                {% endif %}
-              </h3>
-
-              <h4 class="resume-item-details" itemprop="description">{{ project.duration }}</h4>
-              <p class="resume-item-summary">{{ project.summary }}</p>
-            </div>
-          {% endfor %}
-        </section>
-      {% endif %}
-
-
+      
 
       {% if site.hackathons_toggle %}
       <!-- Hackathons section -->
