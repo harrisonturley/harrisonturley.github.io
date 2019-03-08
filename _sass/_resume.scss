@@ -650,113 +650,8 @@
   padding-top: 1rem;
 }
 
-////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-.content-section {
-  border: 1px solid black;
-  padding: 2rem 1.5rem 0.5rem;
-  margin: 3rem 0 0rem;
-  background-color: #FFFFFF;
-  @include bottom_shadow;
-
-  .section-header {
-    margin-bottom: 1rem;
-    padding: 0.4rem 0;
-    @include section-break;
-    @include clearfix;
-
-    .section-title {
-      font-weight: 900;
-      font-size: 1.75rem;
-      letter-spacing: -0.05rem;
-      margin: 0;
-      @include sans;
-
-      @include media_larger_than_mobile {
-        float: left;
-        margin: 0;
-      }
-    }
-
-    a {
-      margin: 0;
-      padding: 0;
-      top: 4px;
-      text-align: center;
-      padding-top: 0.4rem;
-      display: inline-block;
-
-      @include media_larger_than_mobile {
-        float: right;
-        border-top: none;
-        padding-top: 0;
-      }
-
-      &:hover .icon path {
-        fill: #0099B5;
-        @include transition(all 0.2s ease);
-      }
-    }
-  }
-
-
-  .resume-item {
-    margin-bottom: 1.5rem;
-  }
-
-  .resume-item-title {
-    font-weight: 700;
-    margin: 0 0 0.75rem;
-    font-size: 1.5rem;
-    letter-spacing: -0.05rem;
-    line-height: 1;
-    @include sans;
-
-    // Styling for any links in the title
-    a {
-      color: #333;
-      text-decoration: none;
-      border-bottom: 1px solid;
-      @include transition(all 0.2s ease);
-
-      &:hover {
-        color: blue;
-      }
-    }
-  }
-
-  .resume-item-details {
-    font-weight: 400;
-    font-size: 1.15rem;
-    margin: 0 0 0.75rem;
-    line-height: 1;
-    @include sans;
-
-    h4 {
-      font-weight: 400;
-      font-size: 1.15rem;
-      margin: 0 0 0.75rem;
-      line-height: 1;
-      @include sans;
-    }
-
-    .resume-item-details-duration {
-      font-size: 1.0rem;
-    }
-  }
-
-  .resume-item-summary, .resume-item-list {
-    margin: 0.75rem 0 0;
-    font-size: 1rem;
-    @include sans;
-
-    li {
-      padding: 0.3rem 0 0;
-    }
-  }
+.skill-list {
+  padding-top: 0.5rem;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -764,7 +659,10 @@
 
 .site-footer {
   border-top: 4px solid #c7c7c7;
-  margin-top: 3rem;
+  margin-top: 6rem;
+  padding-top:1.5rem;
+  padding-bottom: 1.5rem;
+  background-color: #FFF;
 
   .footer-line {
     text-align: center;
