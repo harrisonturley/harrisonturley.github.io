@@ -82,23 +82,20 @@
 
     {% include icon-links.html %}
 
-    <div id="about-me" class="about-me">
+    <div id="about-me" class="about-me section-lg">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
             <div class="shadow-box">
               <div class="row">
                 <div class="col-md-7">
-
                   <div class="row">
                     <div class="col-md-12">
-                      <div class="about-title-container">
-                        <h3 class="about-title">About</h3>
+                      <div class="title-container">
+                        <h3 class="title">About</h3>
                       </div>
                     </div>
                   </div>
-                  
-                
                   <div class="row">
                     <div class="col-md-4">
                       {% if site.avatar == 'true' %}
@@ -110,13 +107,13 @@
                       <p><span class="text-bolded">Email: </span> harrison.turley.1998@gmail.com</p>
                       <div class="about-link">
                         <span class="text-bolded">GitHub: </span>
-                        <a href="{{site.social_links.github_url}}" class="icon-link-github" itemprop="sameAs">
+                        <a href="{{site.social_links.github_url}}" title="GitHub" class="icon-link-github" itemprop="sameAs">
                           {% include icons/icon-github.html %}
                         </a>
                       </div>
                       <div class="about-link">
                         <span class="text-bolded">LinkedIn: </span>
-                        <a href="{{site.social_links.linkedin_url}}" class="icon-link-linkedin" itemprop="sameAs">
+                        <a href="{{site.social_links.linkedin_url}}" title="LinkedIn" class="icon-link-linkedin" itemprop="sameAs">
                           {% include icons/icon-linkedin.html %}
                         </a>
                       </div>
@@ -126,8 +123,8 @@
                 <div class="col-md-5">
                   <div class="row">
                     <div class="col-md-12">
-                        <div class="about-title-container">
-                          <h3 class="about-title">Education</h3>
+                        <div class="title-container">
+                          <h3 class="title">Education</h3>
                         </div>
                       </div>
                   </div>
@@ -162,47 +159,181 @@
       </div>
     </div>
 
-    <div class="wrapper" itemscope itemtype = "http://schema.org/Person">
-
-      {% if site.experience_toggle %}
-      <!-- Experience section -->
-        <section class="content-section" id="experience">
-
-          <!-- Main title for experience -->
-          <header class="section-header">
-            <h2 class="section-title">Experience</h2>
-
-            <!-- Section icon -->
-            <a href="#experience" itemprop="sameAs">
-              {% include icons/icon-experience.html %}
-            </a>
-          </header>
-
-          {% for job in site.data.experience %}
-          <!-- Individual experiences loaded by Liquid -->
-            <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
-              <h3 class="resume-item-title" itemprop="name">
-                {% if job.website %}
-                <a href="{{ job.website }}">
-                  {{ job.company }}
-                </a>
-                {% else %}
-                  {{ job.company }}
-                {% endif %}
-              </h3>
-
-              <div class="resume-item-details" itemprop="description">
-                <h4>{{ job.position }}</h4>
-                <h4 class="resume-item-details-duration">{{ job.duration }}</h4>
+    <div id="experience" class="experience section-lg">
+      <div class="container">
+        <div class="experience-header">
+          <h3 class="experience-title">Work Experience</h3>
+        </div>
+        <div class="row experience-container">
+          <div class="col-lg-4 col-md-6 project-item">
+            <div class="project-wrap">
+              <figure>
+                <img src="images/logicandform.PNG" class="img-fluid" alt="">
+                <a href="#logicExperienceModal" data-toggle="modal" class="link-details" title="More Details"><i class="ion ion-eye"></i></a>
+              </figure>
+              <div class="project-info">
+                <h4 class="project-title"><a href="#logicExperienceModal" data-toggle="modal">Logic&Form</a></h4>
+                <p class="project-description">Software Engineer Co-op</p>
+                <p class="project-timeline">May, 2018 - August, 2018</p>
               </div>
-
-              <p class="resume-item-summary">{{ job.summary }}</p>
             </div>
-          {% endfor %}
-        </section>
-      {% endif %}
+          </div>
+          <div class="col-lg-4 col-md-6 project-item">
+            <div class="project-wrap">
+              <figure>
+                <img src="images/fingerfood.jpg" class="img-fluid" alt="">
+                <a href="#firstFFExperienceModal" data-toggle="modal" class="link-details" title="More Details"><i class="ion ion-eye"></i></a>
+              </figure>
+              <div class="project-info">
+                <h4 class="project-title"><a href="#firstFFExperienceModal" data-toggle="modal">Finger Food Studios</a></h4>
+                <p class="project-description">Quality Assurance Tester</p>
+                <p class="project-timeline">May, 2017 - August, 2017</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 project-item">
+            <div class="project-wrap">
+              <figure>
+                <img src="images/fingerfood.jpg" class="img-fluid" alt="">
+                <a href="#secondFFExperienceModal" data-toggle="modal" class="link-details" title="More Details"><i class="ion ion-eye"></i></a>
+              </figure>
+              <div class="project-info">
+                <h4 class="project-title"><a href="#secondFFExperienceModal" data-toggle="modal">Finger Food Studios</a></h4>
+                <p class="project-description">Quality Assurance Tester</p>
+                <p class="project-timeline">July, 2016 - August, 2016</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="logicExperienceModal" tabindex="-1" role="dialog" aria-labelledby="experienceModal" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="title-container">
+                    <h3 class="title">Logic&Form</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <img src="images/logicandform.PNG" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-8">
+                    <p><span class="text-bolded">Title: </span> Software Engineer Co-op</p>
+                    <p><span class="text-bolded">Duration: </span> May, 2018 - August, 2018</p>
+                    <p><span class="text-bolded">Website: </span><a href="http://logicandform.com/">http://logicandform.com/</a></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <ul class="resume-item-list">
+                    <li>Developed new features for an interactive touch screen wall using <b>Swift</b> and the <b>AppKit</b> framework</li>
+                    <li>Built and tested new menus and scalable interfaces to provide new ways to interactive with and visualize backend data</li>
+                    <li>Analyzed and resolved bugs in previously created interfaces and legacy code to create a smoother user experience</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="firstFFExperienceModal" tabindex="-1" role="dialog" aria-labelledby="experienceModal" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="title-container">
+                    <h3 class="title">Finger Food Studios</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <img src="images/fingerfood.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-8">
+                    <p><span class="text-bolded">Title: </span> Quality Assurance Tester</p>
+                    <p><span class="text-bolded">Duration: </span> May, 2017 - August, 2017</p>
+                    <p><span class="text-bolded">Website: </span><a href="https://www.fingerfoodstudios.com/">https://www.fingerfoodstudios.com/</a></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                    <ul class="resume-item-list"> 
+                      <li>Performed various structured and unstructured testing methods to ensure the best quality product is provided</li> 
+                      <li>Practiced effective communication skills with all members of the team to maximize project progress</li> 
+                      <li>Organized and prioritized daily tasks with proper time management for testing under time constraints</li> 
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="secondFFExperienceModal" tabindex="-1" role="dialog" aria-labelledby="experienceModal" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="title-container">
+                    <h3 class="title">Finger Food Studios</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <img src="images/fingerfood.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-8">
+                    <p><span class="text-bolded">Title: </span> Quality Assurance Tester</p>
+                    <p><span class="text-bolded">Duration: </span> July, 2016 - August, 2016</p>
+                    <p><span class="text-bolded">Website: </span><a href="https://www.fingerfoodstudios.com/">https://www.fingerfoodstudios.com/</a></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                    <ul class="resume-item-list"> 
+                      <li>Performed various structured and unstructured testing methods to ensure the best quality product is provided</li> 
+                      <li>Practiced effective communication skills with all members of the team to maximize project progress</li> 
+                      <li>Organized and prioritized daily tasks with proper time management for testing under time constraints</li> 
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
+    <div class="wrapper" itemscope itemtype = "http://schema.org/Person">
 
       {% if site.projects_toggle %}
       <!-- Project section -->

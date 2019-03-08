@@ -81,26 +81,26 @@
   padding-bottom: 15px;
 
   .nav-link {
-    color: #0078ff;
+    color: #0078FF;
   }
   
   .nav-link:before {
-    background-color: #0078ff;
+    background-color: #0078FF;
   }
   
   .nav-link:hover {
-    color: #0078ff;
+    color: #0078FF;
   }
   
   .show > .nav-link,
   .active > .nav-link,
   .nav-link.show,
   .nav-link.active {
-    color: #0078ff;
+    color: #0078FF;
   }
 
   .navbar-brand {
-    color: #0078ff;
+    color: #0078FF;
     font-size: 1.6rem;
     font-weight: 600;
   }
@@ -163,13 +163,13 @@
   }
 
   .dropdown-menu .dropdown-item:hover {
-    background-color: #0078ff;
+    background-color: #0078FF;
     color: #fff;
     transition: all 500ms ease;
   }
 
   .dropdown-menu .dropdown-item.active {
-    background-color: #0078ff;
+    background-color: #0078FF;
   }
 }
 
@@ -241,7 +241,7 @@
 .back-to-top {
   position: fixed;
   display: inline;
-  background: #0078ff;
+  background: #19D36F;
   color: #FFF;
   width: 44px;
   height: 44px;
@@ -368,7 +368,6 @@
 }
 
 .icon-link-github {
-
   &:hover .icon path {
     fill: black;
     @include transition(all 0.2s ease);
@@ -390,7 +389,6 @@
   padding: 3rem 1.25rem;
   position: relative;
   background-color: #fff;
-  margin-bottom: 3rem;
   z-index: 2;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
 }
@@ -407,36 +405,36 @@
   }
 }
 
-.about-me {
+.section-lg {
   padding-top: 4rem;
-  padding-bottom: 4rem;
+}
 
-  .shadow-box {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
+.title-container {
+  margin-bottom: 2rem;
+}
 
+.title {
+  font-weight: 600;
+  font-size: 2rem;
+  position: relative;
+}
+
+.title:before {
+  content: '';
+  position: absolute;
+  height: 3px;
+  background-color: #0078FF;
+  width: 80px;
+  bottom: -12px;
+}
+
+.title-link {
+  color: #000;
+}
+
+.about-me {
   .about-avatar {
     width: 25%;
-  }
-
-  .about-title-container {
-    margin-bottom: 2rem;
-  }
-
-  .about-title {
-    font-weight: 600;
-    font-size: 2rem;
-    position: relative;
-  }
-
-  .about-title:before {
-    content: '';
-    position: absolute;
-    height: 3px;
-    background-color: #0078ff;
-    width: 100px;
-    bottom: -12px;
   }
 
   .about-degree {
@@ -472,184 +470,11 @@
     content: '';
     position: absolute;
     height: 3px;
-    background-color: #0078ff;
+    background-color: #0078FF;
     width: 100px;
     bottom: -12px;
   }
 }
-
-/*
-.page-header {
-  padding: 0rem 8rem 0.5rem;
-  position: relative;
-  top: 0;
-  left: 0;
-  color: white;
-  
-  @media screen and (max-width: 680px) {
-    margin-top: 8px;
-  }
-
-  .page-header-top {
-    width: 100%;
-    height: 0px;
-    padding-top: 5rem;
-  }
-
-  .avatar {
-    width: 200px;
-    height: 200px;
-    max-width: 100%;
-    overflow: hidden;
-    border-radius: 50%;
-    margin: 0 auto;
-    display: block;
-  }
-
-  .header-resume-name {
-    font-size: 3rem;
-    font-weight: 600;
-    text-align: center;
-    letter-spacing: -0.15rem;
-    line-height: 1;
-    margin: 1rem 0 0;
-    color: white;
-    @include sans;
-  }
-
-  .typing-animation {
-    font-weight: 100;
-    font-size: 2.5em;
-    margin: 0.4em 0;
-    text-align: center;
-    @include sans;
-    
-    .text-rotate {
-      border-right: 0.08em solid #FFF;
-    }
-  }
-
-  .title-bar {
-    margin-top: 2rem;
-    margin-bottom: 0.5rem;
-    padding: 0.4rem 0;
-    @include section-break;
-    @include clearfix;
-
-    .header-title {
-      font-weight: 300;
-      font-size: 1.75rem;
-      line-height: 2rem;
-      letter-spacing: -0.05rem;
-      text-align: center;
-      margin: 0 0 0.5rem;
-      @include sans;
-
-      @include media_larger_than_mobile {
-        float: left;
-        margin: 0;
-      }
-    }
-  }
-
-  .executive-summary {
-    padding: 0.35em;
-    font-size: 1rem;
-    line-height: 1.75rem;
-    text-align: center;
-    @include sans;
-
-    @include media_larger_than_mobile {
-      font-size: 1rem;
-    }
-  }
-}*/
-
-////////////////////////////////////////////////////////////////////////////////
-// Icon Styling
-
-
-/*
-.contact-button-wrap {
-  @include sans;
-  margin: 0.7em auto;
-  width: 6em;
-  height: 2em;
-  font-size: 2.5rem;
-  position: relative;
-  -webkit-perspective: 800px;
-  perspective: 800px;
-  background:#FFFFFF;
-  border-radius:5px;
-  box-shadow:inset 0 0 0.2em 0 rgba(0,0,0,0.25);
-  z-index: 3;
-
-  .inside {
-    width:100%;
-    padding:0.3em 0;
-    position:absolute;
-    text-align:center;
-    font-size:0.35em;
-
-    .email-span {
-      color: #000;
-      font-weight: bold;
-      position: relative;
-    }
-
-    .email-span-data {
-      color: #000;
-    }
-  }
-
-  .button {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    cursor:pointer;
-    -webkit-transform-origin: center bottom;
-    transform-origin: center bottom;
-    @include contact_button_transform;
-
-    div {
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-      border-radius:5px;
-    }
-
-    .front {
-      background:#EFEFEF;
-      position: absolute;
-
-      span {
-        font-size:0.7em;
-        float:left;
-        width:100%;
-        padding:0.65em 0;
-        text-align:center;
-        color:#444444;
-        position: absolute;
-      }
-    }
-
-    .back {
-      background:#333;
-      transform: rotateX( 180deg );
-      box-shadow: 0 0.2em 0.2em 0 rgba(0,0,0,0.15);
-      position: absolute;
-    }
-  }
-
-  &:hover .button {
-    -webkit-transform: rotateX(-150deg);
-    transform: rotateX(-150deg);
-  }
-}*/
 
 .learn-more-header {
   text-align: center;
@@ -668,6 +493,135 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 // Content section styling
+
+.experience-header {
+  vertical-align: center;
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+
+.experience-title {
+  font-weight: 600;
+  font-size: 2rem;
+  position: relative;
+}
+
+.experience-title:before {
+  content: '';
+  position: absolute;
+  height: 3px;
+  background-color: #0078FF;
+  width: 80px;
+  bottom: -12px;
+  left: calc(50% - 40px);
+}
+
+.project-wrap {
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.project-wrap:hover {
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.16);
+}
+
+.project-item {
+  position: relative;
+  height: 360px;
+  overflow: hidden;
+
+  figure {
+    background: #000;
+    overflow: hidden;
+    height: 240px;
+    position: relative;
+    border-radius: 4px 4px 0 0;
+    margin: 0;
+
+    img {
+      max-width: 100%;
+    }
+
+    .link-details {
+      position: absolute;
+      display: inline-block;
+      opacity: 0;
+      line-height: 1;
+      text-align: center;
+      width: 36px;
+      height: 36px;
+      background: #fff;
+      border-radius: 50%;
+      transition: 0.2s linear;
+      right: calc(50% - 18px);
+      top: calc(50% - 18px);
+
+      i {
+        padding-top: 6px;
+        font-size: 22px;
+        color: #333;
+      }
+    }
+
+    .link-details:hover {
+      background: #19D36F;
+
+      i {
+        color: #FFF;
+      }
+    }
+  }
+
+  figure:hover img {
+    opacity: 0.4;
+    transition: 0.3s;
+  }
+
+  figure:hover .link-details {
+    opacity: 1;
+  }
+
+  .project-info {
+    background: #fff;
+    text-align: center;
+    padding: 30px;
+    height: 110px;
+    border-radius: 0 0 3px 3px;
+
+    h4 {
+      font-size: 18px;
+      line-height: 1px;
+      font-weight: 700;
+      margin-bottom: 18px;
+      padding-bottom: 0;
+
+      a {
+        color: #333;
+      }
+
+      a:hover {
+        color: #0078FF;
+      }
+    }
+
+    p {
+      padding: 0;
+      margin: 0;
+      color: #b8b8b8;
+      font-weight: 500;
+      font-size: 14px;
+    }
+  }
+}
+
+.resume-item-list {
+  padding-top: 1rem;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+
 
 .content-section {
   border: 1px solid black;
