@@ -526,9 +526,22 @@
   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.16);
 }
 
+.description-single-line {
+  height: 340px;
+}
+
+.description-double-line {
+  height: 360px;
+}
+
+.image-border {
+  border-width: 1px;
+  border-color: #DDD;
+  border-style: solid;
+}
+
 .project-item {
   position: relative;
-  height: 360px;
   overflow: hidden;
 
   figure {
@@ -588,13 +601,51 @@
     padding: 30px;
     height: 110px;
     border-radius: 0 0 3px 3px;
+    border-color: #EEE;
+    border-top-width: 1px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-style: solid;
 
     h4 {
       font-size: 18px;
       line-height: 1px;
       font-weight: 700;
-      margin-bottom: 18px;
-      padding-bottom: 0;
+      margin-bottom: 0px;
+      padding-bottom: 18px;
+
+      a {
+        color: #333;
+      }
+
+      a:hover {
+        color: #0078FF;
+      }
+    }
+
+    p {
+      padding: 0;
+      margin: 0;
+      color: #b8b8b8;
+      font-weight: 500;
+      font-size: 14px;
+    }
+  }
+
+  .project-info-extra-line {
+    background: #fff;
+    text-align: center;
+    padding: 20px;
+    height: 110px;
+    border-radius: 0 0 3px 3px;
+
+    h4 {
+      font-size: 18px;
+      line-height: 1px;
+      font-weight: 700;
+      margin-bottom: 0px;
+      padding-bottom: 18px;
 
       a {
         color: #333;
