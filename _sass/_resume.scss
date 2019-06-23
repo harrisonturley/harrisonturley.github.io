@@ -440,8 +440,16 @@
 
   .about-degree {
     font-weight: 500;
-    margin: 0 0 0.75rem;
+    margin: 0 0 0.5rem;
     font-size: 1.6rem;
+    line-height: 1;
+    position: relative;
+  }
+
+  .about-minor {
+    font-weight: 500;
+    margin: 0 0 0.75rem;
+    font-size: 1.4rem;
     line-height: 1;
     position: relative;
   }
